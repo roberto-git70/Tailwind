@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servizi — MM&R Design</title>
+
+  <!-- Icone -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-50 antialiased transition-colors">
+
+<!-- NAVBAR -->
+<nav id="navbar"
+     class="fixed top-0 left-0 w-full z-50 backdrop-blur-md 
+            bg-white/70 dark:bg-slate-900/70
+            border-b border-slate-200/60 dark:border-slate-800/70
+            transition-colors">
+
+  <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="/index.html" class="flex items-center gap-2">
+      <img src="/images/MM&R_logo.webp" class="h-7 w-7 rounded-lg shadow" alt="Logo" />
+      <span class="text-[15px] font-semibold text-slate-700 dark:text-slate-200">
+        MM&R<span class="text-blue-600 dark:text-blue-400">Design</span>
+      </span>
+    </a>
+
+<!-- MENU DESKTOP -->
+<ul class="hidden md:flex items-center gap-8 text-[14px] font-medium">
+  <li><a href="/index.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Home</a></li>
+
+  <li class="relative has-dropdown">
+    <button class="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+      Servizi <span class="text-xs">▾</span>
+    </button>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown hidden absolute left-0 mt-3 w-44 rounded-xl 
+                border border-slate-300 bg-white/90 
+                dark:border-slate-800 dark:bg-slate-900/95 
+                p-2 shadow-xl backdrop-blur">
+      
+      <a href="/servizi.html" class="block px-3 py-2 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">UI / UX Design</a>
+      <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Siti Web Responsive</a>
+      <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Performance & SEO</a>
+    </div>
+  </li>
+
+  <li><a href="#contatti" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Contatti</a></li>
+</ul>
+
+<!-- ICONS + SOCIAL (desktop only) -->
+<div class="hidden md:flex items-center gap-7">
+
+  <button id="dark-toggle" aria-label="Toggle dark mode"
+          class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+    <i data-lucide="moon" class="w-5 h-5"></i>
+  </button>
+
+  <a href="#" aria-label="Profilo"
+      class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+    <i data-lucide="user" class="w-5 h-5"></i>
+  </a>
+
+  <span class="w-px h-5 bg-slate-700/50"></span>
+
+  <a href="#" aria-label="Facebook" class="icon-glow text-slate-400 hover:text-blue-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+  <a href="#" aria-label="Instagram" class="icon-glow text-slate-400 hover:text-pink-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+  <a href="#" aria-label="LinkedIn" class="icon-glow text-slate-400 hover:text-blue-500 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+  <a href="#" aria-label="X" class="icon-glow text-slate-400 hover:text-slate-500 transition"><i data-lucide="square-x" class="w-5 h-5"></i></a>
+
+</div>
+<!-- HAMBURGER MOBILE (aligned right) -->
+<button id="mobileMenuBtn"
+        class="md:hidden text-3xl text-slate-700 dark:text-slate-200 ml-auto">
+  ☰
+</button>
+</div>
+
+<!-- MOBILE MENU (right aligned, matching navbar bg) -->
+<div id="mobileMenu"
+  class="hidden md:hidden absolute top-full right-0 w-full z-50
+        bg-white/70 dark:bg-slate-900/70 backdrop-blur-md
+        border-t border-slate-200 dark:border-slate-800">
+<ul class="px-6 py-4 text-right text-sm space-y-3">
+<li><a href="#hero" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Home</a></li>
+<li><a href="#services" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Servizi</a></li>
+<li><a href="#contatti" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Contatti</a></li>
+</ul>
+</div>
+</nav>
+
+
+
+
+
+
+<section class="py-28 bg-slate-100 dark:bg-slate-950 transition-colors">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Titolo sezione -->
+    <div class="mb-20">
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
+        UI / UX Design
+      </h2>
+      <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
+        Creiamo interfacce moderne, fluide e su misura, progettate per offrire un’esperienza 
+        impeccabile su ogni dispositivo. Ogni dettaglio è pensato per migliorare la chiarezza,
+        la navigazione e la conversione.
+      </p>
+    </div>
+
+    <!-- Grid stile Apple -->
+    <div class="grid md:grid-cols-2 gap-16">
+
+      <!-- IMMAGINE / PLACEHOLDER Apple-style -->
+      <div class="relative">
+        <div class="aspect-square rounded-3xl bg-gradient-to-br from-blue-600/20 to-blue-400/10 dark:from-blue-500/20 dark:to-blue-300/10
+                    backdrop-blur-xl border border-white/10 shadow-2xl flex items-center justify-center">
+          <i data-lucide="palette" class="w-24 h-24 text-blue-600 dark:text-blue-400"></i>
+        </div>
+      </div>
+
+      <!-- TESTO DETTAGLIATO -->
+      <div class="space-y-12">
+
+        <!-- Punto 1 -->
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
+            Wireframe & Prototipi interattivi
+          </h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">
+            Prima di passare alla fase di sviluppo, creiamo prototipi interattivi e wireframe 
+            professionali che consentono di vedere in anticipo l’esperienza utente. Questo riduce 
+            errori, migliora i flussi e accelera il processo decisionale.
+          </p>
+        </div>
+
+        <!-- Punto 2 -->
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
+            Design System personalizzati
+          </h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">
+            Creiamo sistemi di design coerenti, scalabili e modulari. Dalle palette colori alle 
+            tipografie, dai componenti UI ai layout: tutto è sviluppato per mantenere coerenza e 
+            velocizzare lo sviluppo futuro.
+          </p>
+        </div>
+
+        <!-- Punto 3 -->
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
+            Approccio Mobile-first
+          </h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">
+            Progettiamo ogni interfaccia partendo dai dispositivi mobili, garantendo navigazione 
+            fluida, tempi di caricamento ridotti e un’esperienza ottimizzata su smartphone e tablet.
+          </p>
+        </div>
+
+        <!-- Punto 4 -->
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
+            UX basata su best practice moderne
+          </h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">
+            Analizziamo comportamenti, pattern moderni e principi psicologici per progettare 
+            esperienze semplici, intuitive e piacevoli. Ogni decisione è supportata da anni di 
+            ricerca nel campo della user experience.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-32 bg-slate-100 dark:bg-slate-950 transition-colors">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+
+    <!-- TESTO -->
+    <div>
+      <p class="uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 text-xs mb-4">
+        UI / UX Design
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
+        Progettiamo interfacce intuitive, eleganti e su misura
+      </h2>
+
+      <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+        Il design non è solo estetica: è comunicazione, struttura, equilibrio.
+        Ogni pagina deve accompagnare l’utente con naturalezza, ridurre la frizione
+        e valorizzare il tuo brand.
+      </p>
+
+      <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-300 text-[16px]">
+        <li>• Wireframe ad alta definizione</li>
+        <li>• Design System personalizzati</li>
+        <li>• Flussi utente fluidi e chiari</li>
+        <li>• Prototipi interattivi realistici</li>
+      </ul>
+    </div>
+
+    <!-- IMMAGINE -->
+    <div class="relative">
+      <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl 
+                  bg-white/10 dark:bg-white/5 border border-white/10 backdrop-blur-xl 
+                  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.15)] transition-all duration-300">
+        <img src="/images/ux-preview.webp"
+             class="w-full h-full object-cover" alt="UI UX Design Preview" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-32 bg-white dark:bg-slate-900 transition-colors">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+
+    <!-- IMMAGINE -->
+    <div class="order-1 lg:order-none">
+      <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl 
+                  bg-white/10 dark:bg-white/5 border border-white/10 backdrop-blur-xl
+                  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.15)] transition-all duration-300">
+        <img src="/images/dev-preview.webp"
+             class="w-full h-full object-cover" alt="Development Preview" />
+      </div>
+    </div>
+
+    <!-- TESTO -->
+    <div>
+      <p class="uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 text-xs mb-4">
+        Sviluppo Web
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
+        Siti web su misura. Zero template, zero compromessi
+      </h2>
+
+      <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+        Ogni progetto viene sviluppato interamente a codice per garantire performance,
+        stabilità e totale libertà creativa. Nessun page builder, nessun peso superfluo.
+      </p>
+
+      <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-300 text-[16px]">
+        <li>• Layout responsive fluidi</li>
+        <li>• Ottimizzazione del DOM e del CSS</li>
+        <li>• Animazioni leggere e progressive</li>
+        <li>• Performance superiori ai builder</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-36 bg-slate-100 dark:bg-slate-950 transition-colors">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+
+    <p class="uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 text-xs mb-4">
+      Performance & SEO
+    </p>
+
+    <h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
+      Velocità, stabilità, visibilità: il cuore di un sito professionale
+    </h2>
+
+    <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+      Ogni sito è progettato per raggiungere punteggi elevati nei Core Web Vitals,
+      garantire caricamenti rapidi e dare al tuo brand la massima competitività sui motori di ricerca.
+    </p>
+  </div>
+
+  <!-- IMMAGINE FULL-WIDTH -->
+  <div class="max-w-6xl mx-auto px-6 mt-16">
+    <div class="aspect-[21/9] rounded-2xl overflow-hidden shadow-xl 
+                bg-white/10 dark:bg-white/5 border border-white/10 backdrop-blur-xl
+                hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.15)] transition-all duration-300">
+      <img src="/images/performance-hero.webp"
+           class="w-full h-full object-cover" alt="Performance Preview" />
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="pt-32 pb-20 text-center">
+  <h1 class="text-4xl md:text-5xl font-semibold">
+    Le nostre soluzioni su misura
+  </h1>
+  <p class="mt-4 text-slate-600 dark:text-slate-400 text-base md:text-lg">
+    Strategie, design e sviluppo costruiti per far crescere la tua attività.
+  </p>
+</section>
+
+<!-- SERVIZI -->
+<section class="max-w-6xl mx-auto px-6 pb-24 space-y-16">
+
+  <!-- GRID -->
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- CARD -->
+    <div class="group p-8 rounded-2xl 
+                bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10
+                backdrop-blur-md
+                transition-all duration-300
+                hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
+      
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="palette" class="w-8 h-8"></i>
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">UI / UX Design</h3>
+      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+        <li>• Wireframe & prototipi interattivi</li>
+        <li>• Design System personalizzati</li>
+        <li>• Mobile-first design</li>
+        <li>• UX basata su best practice moderne</li>
+      </ul>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="group p-8 rounded-2xl bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10 backdrop-blur-md transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="monitor-smartphone" class="w-8 h-8"></i>
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Siti Web Aziendali</h3>
+      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+        <li>• Codice pulito (HTML/CSS/JS)</li>
+        <li>• SEO tecnica</li>
+        <li>• Struttura scalabile</li>
+        <li>• Prestazioni elevate</li>
+      </ul>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="group p-8 rounded-2xl bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10 backdrop-blur-md transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">E-commerce</h3>
+      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+        <li>• Design ottimizzato per la conversione</li>
+        <li>• Gestione prodotti e categorie</li>
+        <li>• Sicurezza & performance</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="group p-8 rounded-2xl bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10 backdrop-blur-md transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="rocket" class="w-8 h-8"></i>
+      </div>
+      <h3 class="mt-4 text-xl font-semibold">Performance & SEO</h3>
+      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+        <li>• Ottimizzazione Core Web Vitals</li>
+        <li>• SEO tecnica</li>
+        <li>• Miglioramento tempi di caricamento</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA FINALE -->
+<section class="py-20 text-center">
+  <h2 class="text-3xl font-semibold">Vuoi migliorare la tua presenza online?</h2>
+  <p class="mt-3 text-slate-500 dark:text-slate-400">
+    Parliamo del tuo progetto e troviamo la soluzione perfetta.
+  </p>
+
+  <a href="/index.html#contatti"
+     class="mt-6 inline-block px-8 py-3 rounded-xl 
+            bg-blue-600 hover:bg-blue-700 text-white font-medium
+            shadow-[0_0_20px_rgba(0,112,255,0.4)] transition">
+    Contattaci
+  </a>
+</section>
+
+<!-- JS -->
+<script type="module" src="/src/main.js"></script>
+<script>lucide.createIcons();</script>
+
+</body>
+</html>
