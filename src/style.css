@@ -2,13 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Piccole personalizzazioni */
+/* =============================================
+   BASE: Colori e stili globali
+============================================= */
 @layer base {
   body {
     @apply bg-slate-950 text-slate-50;
   }
 }
+
+/* =============================================
+   UTILITÀ VISIVE: Effetti comuni e transizioni
+============================================= */
 .icon-glow {
+  @apply text-slate-400 hover:text-blue-400 transition;
   transition: all 0.25s ease;
 }
 
@@ -17,6 +24,28 @@
   transform: translateY(-1px);
 }
 
+/* =============================================
+   NAVIGAZIONE: Link, bottoni, menu mobile
+============================================= */
+.nav-link {
+  @apply text-slate-700 dark:text-slate-300 
+         hover:text-blue-600 dark:hover:text-white transition;
+}
+
+.icon-btn {
+  @apply text-slate-600 hover:text-slate-900 
+         dark:text-slate-400 dark:hover:text-white transition;
+}
+
+.mobile-link {
+  @apply block px-2 py-2 rounded-lg 
+         hover:bg-slate-200/60 dark:hover:bg-slate-800 
+         text-slate-700 dark:text-slate-200;
+}
+
+/* =============================================
+   FOOTER: Link e icone con effetti
+============================================= */
 .footer-link {
   @apply hover:text-blue-500 dark:hover:text-blue-300 transition relative;
 }
@@ -32,21 +61,3 @@
 .footer-icon:hover {
   text-shadow: 0 0 10px rgba(56, 132, 255, 0.4);
 }
-
-.nav-link {
-  @apply text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition;
-}
-
-.icon-btn {
-  @apply text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition;
-}
-
-.icon-glow {
-  @apply text-slate-400 hover:text-blue-400 transition;
-}
-
-.mobile-link {
-  @apply block px-2 py-2 rounded-lg hover:bg-slate-200/60 
-         dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200;
-}
-

@@ -38,8 +38,6 @@
 <!-- Icone -->
 <link rel="icon" type="image/png" href="/images/MM&R_logo.webp" /><script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
-<body>
   
 <body class="bg-slate-100 text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50">
 
@@ -61,80 +59,70 @@
       </span>
     </a>
 
-    <!-- MENU DESKTOP -->
-    <ul class="hidden md:flex items-center gap-8 text-[14px] font-medium">
-      <li><a href="#hero" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Home</a></li>
+<!-- MENU DESKTOP -->
+<ul class="hidden md:flex items-center gap-8 text-[14px] font-medium">
+  <li><a href="#hero" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Home</a></li>
 
-      <li class="relative has-dropdown">
-        <button class="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
-          Servizi <span class="text-xs">▾</span>
-        </button>
-
-        <!-- DROPDOWN -->
-        <div class="dropdown hidden absolute left-0 mt-3 w-44 rounded-xl 
-                    border border-slate-300 bg-white/90 
-                    dark:border-slate-800 dark:bg-slate-900/95 
-                    p-2 shadow-xl backdrop-blur">
-          
-          <a href="#services" class="block px-3 py-2 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">UI / UX Design</a>
-          <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Siti Web Responsive</a>
-          <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Performance & SEO</a>
-        </div>
-      </li>
-
-      <li><a href="#contatti" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Contatti</a></li>
-    </ul>
-
-    <!-- ICONS + SOCIAL (desktop only) -->
-    <div class="hidden md:flex items-center gap-7">
-
-      <button id="dark-toggle" aria-label="Toggle dark mode"
-              class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
-        <i data-lucide="moon" class="w-5 h-5"></i>
-      </button>
-
-      <a href="#" aria-label="Profilo"
-         class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
-        <i data-lucide="user" class="w-5 h-5"></i>
-      </a>
-
-      <span class="w-px h-5 bg-slate-700/50"></span>
-
-      <a href="#" aria-label="Facebook" class="icon-glow text-slate-400 hover:text-blue-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-      <a href="#" aria-label="Instagram" class="icon-glow text-slate-400 hover:text-pink-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-      <a href="#" aria-label="LinkedIn" class="icon-glow text-slate-400 hover:text-blue-500 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-      <a href="#" aria-label="X" class="icon-glow text-slate-400 hover:text-slate-500 transition"><i data-lucide="square-x" class="w-5 h-5"></i></a>
-
-    </div>
-
-    <!-- HAMBURGER MOBILE (aligned right) -->
-    <button id="mobileMenuBtn"
-            class="md:hidden text-3xl text-slate-700 dark:text-slate-200 ml-auto">
-      ☰
+  <li class="relative has-dropdown">
+    <button class="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+      Servizi <span class="text-xs">▾</span>
     </button>
 
-  </div>
+    <!-- DROPDOWN -->
+    <div class="dropdown hidden absolute left-0 mt-3 w-44 rounded-xl 
+                border border-slate-300 bg-white/90 
+                dark:border-slate-800 dark:bg-slate-900/95 
+                p-2 shadow-xl backdrop-blur">
+      
+      <a href="#services" class="block px-3 py-2 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">UI / UX Design</a>
+      <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Siti Web Responsive</a>
+      <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Performance & SEO</a>
+    </div>
+  </li>
 
+  <li><a href="#contatti" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Contatti</a></li>
+</ul>
 
-  <!-- MOBILE MENU (right aligned, matching navbar bg) -->
-  <div id="mobileMenu"
-       class="hidden md:hidden absolute top-full right-0 w-full z-50
-              bg-white/70 dark:bg-slate-900/70 backdrop-blur-md
-              border-t border-slate-200 dark:border-slate-800">
+<!-- ICONS + SOCIAL (desktop only) -->
+<div class="hidden md:flex items-center gap-7">
 
-    <ul class="px-6 py-4 text-right text-sm space-y-3">
-      <li><a href="#hero" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Home</a></li>
-      <li><a href="#services" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Servizi</a></li>
-      <li><a href="#contatti" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Contatti</a></li>
-    </ul>
+  <button id="dark-toggle" aria-label="Toggle dark mode"
+          class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+    <i data-lucide="moon" class="w-5 h-5"></i>
+  </button>
 
-  </div>
+  <a href="#" aria-label="Profilo"
+      class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+    <i data-lucide="user" class="w-5 h-5"></i>
+  </a>
 
+  <span class="w-px h-5 bg-slate-700/50"></span>
+
+  <a href="#" aria-label="Facebook" class="icon-glow text-slate-400 hover:text-blue-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+  <a href="#" aria-label="Instagram" class="icon-glow text-slate-400 hover:text-pink-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+  <a href="#" aria-label="LinkedIn" class="icon-glow text-slate-400 hover:text-blue-500 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+  <a href="#" aria-label="X" class="icon-glow text-slate-400 hover:text-slate-500 transition"><i data-lucide="square-x" class="w-5 h-5"></i></a>
+
+</div>
+<!-- HAMBURGER MOBILE (aligned right) -->
+<button id="mobileMenuBtn"
+        class="md:hidden text-3xl text-slate-700 dark:text-slate-200 ml-auto">
+  ☰
+</button>
+</div>
+
+<!-- MOBILE MENU (right aligned, matching navbar bg) -->
+<div id="mobileMenu"
+  class="hidden md:hidden absolute top-full right-0 w-full z-50
+        bg-white/70 dark:bg-slate-900/70 backdrop-blur-md
+        border-t border-slate-200 dark:border-slate-800">
+<ul class="px-6 py-4 text-right text-sm space-y-3">
+<li><a href="#hero" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Home</a></li>
+<li><a href="#services" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Servizi</a></li>
+<li><a href="#contatti" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Contatti</a></li>
+</ul>
+</div>
 </nav>
-
-
-
-<main>
 
 <!-- HERO -->
 <section id="hero" class="relative flex items-center pt-32 pb-24 text-slate-900 bg-white dark:bg-slate-950 dark:text-slate-50">
@@ -227,203 +215,202 @@
 
     <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
-      <!-- CARD 1 -->
-      <article class="fade-in group p-6 rounded-2xl 
-        bg-white/70 dark:bg-white/5 
-        border border-white/10 
-        backdrop-blur-xl 
-        transition-all duration-300 
-        hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
-        hover:border-blue-500/40">
-        
-        <div class="text-blue-600 dark:text-blue-400">
-          <i data-lucide="palette" class="w-7 h-7"></i>
-        </div>
+<!-- CARD 1 -->
+<article class="fade-in group p-6 rounded-2xl 
+  bg-white/70 dark:bg-white/5 
+  border border-white/10 
+  backdrop-blur-xl 
+  transition-all duration-300 
+  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
+  hover:border-blue-500/40">
+  
+  <div class="text-blue-600 dark:text-blue-400">
+    <i data-lucide="palette" class="w-7 h-7"></i>
+  </div>
 
-        <h3 class="mt-4 text-lg font-semibold">UI / UX Design</h3>
+  <h3 class="mt-4 text-lg font-semibold">UI / UX Design</h3>
 
-        <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
-          <li>• Wireframe e prototipi</li>
-          <li>• Design system</li>
-          <li>• Mockup professionali</li>
-        </ul>
+  <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
+    <li>• Wireframe e prototipi</li>
+    <li>• Design system</li>
+    <li>• Mockup professionali</li>
+  </ul>
 
-      </article>
+</article>
 
-      <!-- CARD 2 -->
-      <article class="fade-in group p-6 rounded-2xl 
-        bg-white/70 dark:bg-white/5 
-        border border-white/10 
-        backdrop-blur-xl 
-        transition-all duration-300 
-        hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
-        hover:border-blue-500/40">
+<!-- CARD 2 -->
+<article class="fade-in group p-6 rounded-2xl 
+  bg-white/70 dark:bg-white/5 
+  border border-white/10 
+  backdrop-blur-xl 
+  transition-all duration-300 
+  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
+  hover:border-blue-500/40">
 
-        <div class="text-blue-600 dark:text-blue-400">
-          <i data-lucide="monitor-smartphone" class="w-7 h-7"></i>
-        </div>
+  <div class="text-blue-600 dark:text-blue-400">
+    <i data-lucide="monitor-smartphone" class="w-7 h-7"></i>
+  </div>
 
-        <h3 class="mt-4 text-lg font-semibold">Siti Web Aziendali</h3>
+  <h3 class="mt-4 text-lg font-semibold">Siti Web Aziendali</h3>
 
-        <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
-          <li>• Sviluppo interamente a codice</li>
-          <li>• Layout responsive</li>
-          <li>• Prestazioni elevate</li>
-        </ul>
+  <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
+    <li>• Sviluppo interamente a codice</li>
+    <li>• Layout responsive</li>
+    <li>• Prestazioni elevate</li>
+  </ul>
 
-      </article>
+</article>
 
-      <!-- CARD 3 -->
-      <article class="fade-in group p-6 rounded-2xl 
-        bg-white/70 dark:bg-white/5 
-        border border-white/10 
-        backdrop-blur-xl 
-        transition-all duration-300 
-        hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
-        hover:border-blue-500/40">
+<!-- CARD 3 -->
+<article class="fade-in group p-6 rounded-2xl 
+  bg-white/70 dark:bg-white/5 
+  border border-white/10 
+  backdrop-blur-xl 
+  transition-all duration-300 
+  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
+  hover:border-blue-500/40">
 
-        <div class="text-blue-600 dark:text-blue-400">
-          <i data-lucide="shopping-cart" class="w-7 h-7"></i>
-        </div>
+  <div class="text-blue-600 dark:text-blue-400">
+    <i data-lucide="shopping-cart" class="w-7 h-7"></i>
+  </div>
 
-        <h3 class="mt-4 text-lg font-semibold">E-commerce</h3>
+  <h3 class="mt-4 text-lg font-semibold">E-commerce</h3>
 
-        <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
-          <li>• Design ottimizzato per la conversione</li>
-          <li>• Gestione prodotti e categorie</li>
-          <li>• Sicurezza & performance</li>
-        </ul>
+  <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
+    <li>• Design ottimizzato per la conversione</li>
+    <li>• Gestione prodotti e categorie</li>
+    <li>• Sicurezza & performance</li>
+  </ul>
 
-      </article>
+</article>
 
-      <!-- CARD 4 -->
-      <article class="fade-in group p-6 rounded-2xl 
-        bg-white/70 dark:bg-white/5 
-        border border-white/10 
-        backdrop-blur-xl 
-        transition-all duration-300 
-        hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
-        hover:border-blue-500/40">
-        <div class="text-blue-600 dark:text-blue-400">
-          <i data-lucide="rocket" class="w-7 h-7"></i>
-        </div>
+<!-- CARD 4 -->
+<article class="fade-in group p-6 rounded-2xl 
+  bg-white/70 dark:bg-white/5 
+  border border-white/10 
+  backdrop-blur-xl 
+  transition-all duration-300 
+  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
+  hover:border-blue-500/40">
+  <div class="text-blue-600 dark:text-blue-400">
+    <i data-lucide="rocket" class="w-7 h-7"></i>
+  </div>
 
-        <h3 class="mt-4 text-lg font-semibold">Performance & SEO</h3>
+  <h3 class="mt-4 text-lg font-semibold">Performance & SEO</h3>
 
-        <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
-          <li>• Ottimizzazione Core Web Vitals</li>
-          <li>• SEO tecnica</li>
-          <li>• Miglioramento tempi di caricamento</li>
-        </ul>
-
-      </article>
-
+  <ul class="mt-3 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
+    <li>• Ottimizzazione Core Web Vitals</li>
+    <li>• SEO tecnica</li>
+    <li>• Miglioramento tempi di caricamento</li>
+  </ul>
+</article>
     </div>
   </div>
 </section>
+<!-- SIDE CARD END-->
 
 <!-- METODO DI LAVORO - VERSIONE STEPPER -->
 <section id="workflow" class="py-20 md:py-24 bg-slate-100 dark:bg-slate-950 transition-colors duration-300">
   <div class="mx-auto max-w-6xl px-6">
 
-    <!-- Titolo -->
-    <div class="fade-in text-center max-w-2xl mx-auto">
-      <h2 class="text-3xl font-semibold md:text-4xl">Il nostro metodo di lavoro</h2>
-      <p class="mt-3 text-sm md:text-base text-slate-600 dark:text-slate-400">
-        Qualità, performance e controllo totale del codice. Nessun compromesso.
+<!-- Titolo -->
+<div class="fade-in text-center max-w-2xl mx-auto">
+<h2 class="text-3xl font-semibold md:text-4xl">Il nostro metodo di lavoro</h2>
+<p class="mt-3 text-sm md:text-base text-slate-600 dark:text-slate-400">
+  Qualità, performance e controllo totale del codice. Nessun compromesso.
+</p>
+</div>
+
+<!-- Stepper -->
+<div class="mt-16 relative">
+
+<!-- Linea orizzontale desktop -->
+<div class="hidden md:block absolute left-4 right-4 top-6 h-px bg-slate-300 dark:bg-slate-800"></div>
+
+<ol class="relative grid gap-10 md:grid-cols-4">
+  
+  <!-- STEP 1 -->
+  <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
+    <div class="flex items-center gap-3 md:flex-col md:gap-2">
+      <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
+                  dark:bg-slate-950 dark:text-blue-400">
+        01
+      </div>
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="code" class="w-5 h-5"></i>
+      </div>
+    </div>
+
+    <div class="mt-1">
+      <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Codice puro</h3>
+      <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+        Sviluppiamo a mano in HTML, CSS e JavaScript per la massima qualità e controllo su ogni dettaglio.
       </p>
     </div>
+  </li>
 
-    <!-- Stepper -->
-    <div class="mt-16 relative">
-
-      <!-- Linea orizzontale desktop -->
-      <div class="hidden md:block absolute left-4 right-4 top-6 h-px bg-slate-300 dark:bg-slate-800"></div>
-
-      <ol class="relative grid gap-10 md:grid-cols-4">
-        
-        <!-- STEP 1 -->
-        <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
-          <div class="flex items-center gap-3 md:flex-col md:gap-2">
-            <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
-                        dark:bg-slate-950 dark:text-blue-400">
-              01
-            </div>
-            <div class="text-blue-600 dark:text-blue-400">
-              <i data-lucide="code" class="w-5 h-5"></i>
-            </div>
-          </div>
-
-          <div class="mt-1">
-            <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Codice puro</h3>
-            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              Sviluppiamo a mano in HTML, CSS e JavaScript per la massima qualità e controllo su ogni dettaglio.
-            </p>
-          </div>
-        </li>
-
-        <!-- STEP 2 -->
-        <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
-          <div class="flex items-center gap-3 md:flex-col md:gap-2">
-            <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
-                        dark:bg-slate-950 dark:text-blue-400">
-              02
-            </div>
-            <div class="text-blue-600 dark:text-blue-400">
-              <i data-lucide="layers" class="w-5 h-5"></i>
-            </div>
-          </div>
-
-          <div class="mt-1">
-            <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Framework moderni</h3>
-            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              Tailwind CSS, Bootstrap e componenti custom: stack leggero, scalabile e facile da mantenere.
-            </p>
-          </div>
-        </li>
-
-        <!-- STEP 3 -->
-        <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
-          <div class="flex items-center gap-3 md:flex-col md:gap-2">
-            <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
-                        dark:bg-slate-950 dark:text-blue-400">
-              03
-            </div>
-            <div class="text-blue-600 dark:text-blue-400">
-              <i data-lucide="shield" class="w-5 h-5"></i>
-            </div>
-          </div>
-
-          <div class="mt-1">
-            <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Zero page builder</h3>
-            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              No Elementor, Divi o Wix: niente codice gonfio, più sicurezza, più stabilità, più controllo.
-            </p>
-          </div>
-        </li>
-
-        <!-- STEP 4 -->
-        <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
-          <div class="flex items-center gap-3 md:flex-col md:gap-2">
-            <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
-                        dark:bg-slate-950 dark:text-blue-400">
-              04
-            </div>
-            <div class="text-blue-600 dark:text-blue-400">
-              <i data-lucide="zap" class="w-5 h-5"></i>
-            </div>
-          </div>
-
-          <div class="mt-1">
-            <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Performance & SEO</h3>
-            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              Ottimizziamo struttura, codice e Core Web Vitals per siti veloci, stabili e ben indicizzati.
-            </p>
-          </div>
-        </li>
-
-      </ol>
+  <!-- STEP 2 -->
+  <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
+    <div class="flex items-center gap-3 md:flex-col md:gap-2">
+      <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
+                  dark:bg-slate-950 dark:text-blue-400">
+        02
+      </div>
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="layers" class="w-5 h-5"></i>
+      </div>
     </div>
+
+    <div class="mt-1">
+      <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Framework moderni</h3>
+      <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+        Tailwind CSS, Bootstrap e componenti custom: stack leggero, scalabile e facile da mantenere.
+      </p>
+    </div>
+  </li>
+
+  <!-- STEP 3 -->
+  <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
+    <div class="flex items-center gap-3 md:flex-col md:gap-2">
+      <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
+                  dark:bg-slate-950 dark:text-blue-400">
+        03
+      </div>
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="shield" class="w-5 h-5"></i>
+      </div>
+    </div>
+
+    <div class="mt-1">
+      <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Zero page builder</h3>
+      <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+        No Elementor, Divi o Wix: niente codice gonfio, più sicurezza, più stabilità, più controllo.
+      </p>
+    </div>
+  </li>
+
+  <!-- STEP 4 -->
+  <li class="relative z-10 flex gap-4 md:flex-col md:items-center md:text-center">
+    <div class="flex items-center gap-3 md:flex-col md:gap-2">
+      <div class="flex items-center justify-center w-9 h-9 rounded-full border border-blue-500 bg-white text-xs font-semibold text-blue-600 shadow-sm
+                  dark:bg-slate-950 dark:text-blue-400">
+        04
+      </div>
+      <div class="text-blue-600 dark:text-blue-400">
+        <i data-lucide="zap" class="w-5 h-5"></i>
+      </div>
+    </div>
+
+    <div class="mt-1">
+      <h3 class="text-base font-semibold text-slate-900 dark:text-slate-50">Performance & SEO</h3>
+      <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+        Ottimizziamo struttura, codice e Core Web Vitals per siti veloci, stabili e ben indicizzati.
+      </p>
+    </div>
+  </li>
+
+</ol>
+</div>
 
   </div>
 </section>
@@ -513,24 +500,17 @@
 </ul>
 
 <!-- Button -->
-<div class="mt-8">
-  <a href="https://www.dataset.info"
-      target="_blank"
+<div class="mt-8"><a href="https://www.dataset.info"target="_blank"
 class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800 
               px-10 py-4 text-base font-medium text-blue-600 dark:text-blue-400
               shadow-xl shadow-blue-500/10 dark:shadow-blue-500/20
               ring-1 ring-slate-200 dark:ring-slate-700
               hover:shadow-blue-500/30 hover:-translate-y-0.5
-              transition-all">Visita il progetto
-  </a>
-</div>
-</div>
-
-</div>
-
+              transition-all">Visita il progetto</a></div>
+      </div>
+    </div>
   </div>
 </section>
-
 
 <!-- CTA con doppio gradiente morbido -->
 <section 
@@ -541,24 +521,24 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
   <!-- Layer centrale (la CTA vera e propria) -->
   <div class="relative z-10 text-center max-w-3xl mx-auto px-6">
 
-    <h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
-      Trasforma la tua presenza digitale.<br />
-      Cominciamo insieme.
-    </h2>
+<h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
+  Trasforma la tua presenza digitale.<br />
+  Cominciamo insieme.
+</h2>
 
-    <p class="mt-5 text-slate-600 dark:text-slate-400 text-lg">
-      Una call diretta per capire il tuo progetto e costruire qualcosa che funzioni davvero.
-    </p>
+<p class="mt-5 text-slate-600 dark:text-slate-400 text-lg">
+  Una call diretta per capire il tuo progetto e costruire qualcosa che funzioni davvero.
+</p>
 
-    <a href="#contatti"
-       class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800 
-              px-10 py-4 text-base font-medium text-blue-600 dark:text-blue-400
-              shadow-xl shadow-blue-500/10 dark:shadow-blue-500/20
-              ring-1 ring-slate-200 dark:ring-slate-700
-              hover:shadow-blue-500/30 hover:-translate-y-0.5
-              transition-all">
-      Prenota una call gratuita
-    </a>
+<a href="#contatti"
+    class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800 
+          px-10 py-4 text-base font-medium text-blue-600 dark:text-blue-400
+          shadow-xl shadow-blue-500/10 dark:shadow-blue-500/20
+          ring-1 ring-slate-200 dark:ring-slate-700
+          hover:shadow-blue-500/30 hover:-translate-y-0.5
+          transition-all">
+  Prenota una call gratuita
+</a>
 
   </div>
 
@@ -574,8 +554,6 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
 </section>
 
 <!-- CTA con doppio gradiente morbido END-->
-
-<!-- TECNOLOGIE & STACK -->
 
 <!-- TECNOLOGIE & STACK -->
 <section id="tech-stack" class="py-24 bg-slate-100 dark:bg-slate-950 transition-colors">

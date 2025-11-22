@@ -1,127 +1,164 @@
+
 import './style.css';
 
-// =====================================================
-// DARK MODE - VERSIONE DEFINITIVA (senza duplicati)
-// =====================================================
+/* =====================================================
+   INIT APP
+   ===================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  initDarkMode();
+  initMobileMenu();
+  initDropdownMenus();
+  initFadeInOnScroll();
+  initNavbarShadow();
+  initFAQAccordion();
+});
 
-const darkToggle = document.getElementById("dark-toggle");
+/* =====================================================
+   DARK MODE (tema scuro/chiaro)
+   ===================================================== */
+function initDarkMode() {
+  const darkToggle = document.getElementById("dark-toggle");
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem("theme");
 
-// Leggi il tema salvato
-const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    html.classList.remove("dark");
+  } else {
+    html.classList.add("dark");
+  }
 
-// Imposta il tema iniziale (default = dark)
-if (savedTheme === "light") {
-  document.documentElement.classList.remove("dark");
-} else {
-  document.documentElement.classList.add("dark"); // default
+  if (darkToggle) {
+    darkToggle.textContent = html.classList.contains("dark") ? "🌙" : "☀️";
+    darkToggle.setAttribute("aria-label", html.classList.contains("dark") ? "Tema scuro attivo" : "Tema chiaro attivo");
+
+    darkToggle.addEventListener("click", () => {
+      html.classList.toggle("dark");
+
+      const isDark = html.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      darkToggle.textContent = isDark ? "🌙" : "☀️";
+      darkToggle.setAttribute("aria-label", isDark ? "Tema scuro attivo" : "Tema chiaro attivo");
+    });
+  }
 }
 
+/* =====================================================
+   MENU MOBILE
+   ===================================================== */
+function initMobileMenu() {
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-// Toggle dark/light
-if (darkToggle) {
-  darkToggle.addEventListener("click", () => {
-    const html = document.documentElement;
-    html.classList.toggle("dark");
-
-    if (html.classList.contains("dark")) {
-      localStorage.setItem("theme", "dark");
-      darkToggle.textContent = "🌙"; // icona notte
-    } else {
-      localStorage.setItem("theme", "light");
-      darkToggle.textContent = "☀️"; // icona sole
-    }
-  });
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', !isOpen);
+    });
+  }
 }
 
-// =====================================================
-// MOBILE MENU
-// =====================================================
-const mobileBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+/* =====================================================
+   DROPDOWN MENU (solo desktop)
+   ===================================================== */
+function initDropdownMenus() {
+  const wrappers = document.querySelectorAll('.has-dropdown');
 
-if (mobileBtn && mobileMenu) {
-  mobileBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-}
+  wrappers.forEach(wrapper => {
+    const button = wrapper.querySelector('button');
+    const dropdown = wrapper.querySelector('.dropdown');
 
-// =====================================================
-// DROPDOWN MENU (solo desktop)
-// =====================================================
-document.querySelectorAll('.has-dropdown').forEach((wrapper) => {
-  const button = wrapper.querySelector('button');
-  const dropdown = wrapper.querySelector('.dropdown');
+    if (!button || !dropdown) return;
 
-  if (!button || !dropdown) return;
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
 
-  button.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('hidden');
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.add('hidden');
+      });
+
+      dropdown.classList.toggle('hidden');
+    });
   });
 
   document.addEventListener('click', () => {
-    dropdown.classList.add('hidden');
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.add('hidden'));
   });
-});
+}
 
-// =====================================================
-// FADE-IN ON SCROLL
-// =====================================================
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100', 'translate-y-0');
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-
-document.querySelectorAll('.fade-in').forEach((el) => {
-  el.classList.add(
-    'opacity-0',
-    'translate-y-4',
-    'transition',
-    'duration-700',
-    'ease-out'
+/* =====================================================
+   FADE-IN SU SCROLL
+   ===================================================== */
+function initFadeInOnScroll() {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
   );
-  observer.observe(el);
-});
 
-// =====================================================
-// NAVBAR SHADOW ON SCROLL
-// =====================================================
-const navbar = document.getElementById('navbar');
+  document.querySelectorAll('.fade-in').forEach(el => {
+    el.classList.add(
+      'opacity-0',
+      'translate-y-4',
+      'transition',
+      'duration-700',
+      'ease-out'
+    );
+    observer.observe(el);
+  });
+}
 
-if (navbar) {
+/* =====================================================
+   NAVBAR - OMBRA ALLO SCROLL
+   ===================================================== */
+function initNavbarShadow() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+
+  let ticking = false;
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('shadow-lg');
-    } else {
-      navbar.classList.remove('shadow-lg');
+    if (!ticking) {
+      ticking = true;
+
+      window.requestAnimationFrame(() => {
+        navbar.classList.toggle('shadow-lg', window.scrollY > 10);
+        ticking = false;
+      });
     }
   });
 }
 
-// --- FAQ accordion ---
-document.querySelectorAll(".faq-item").forEach(item => {
-  item.addEventListener("click", () => {
-    const answer = item.querySelector(".faq-answer");
-    const icon = item.querySelector("[data-lucide='chevron-down']");
+/* =====================================================
+   FAQ - ACCORDION
+   ===================================================== */
+function initFAQAccordion() {
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const answer = item.querySelector(".faq-answer");
+      const icon = item.querySelector("[data-lucide='chevron-down']");
 
-    const isOpen = !answer.classList.contains("hidden");
+      if (!answer || !icon) return;
 
-    // Chiudi tutte le altre FAQ
-    document.querySelectorAll(".faq-answer").forEach(a => a.classList.add("hidden"));
-    document.querySelectorAll("[data-lucide='chevron-down']").forEach(i => i.classList.remove("rotate-180"));
+      const isOpen = !answer.classList.contains("hidden");
 
-    // Se non era aperta → apri
-    if (!isOpen) {
-      answer.classList.remove("hidden");
-      icon.classList.add("rotate-180");
-    }
+      document.querySelectorAll(".faq-answer").forEach(a =>
+        a.classList.add("hidden")
+      );
+      document.querySelectorAll("[data-lucide='chevron-down']").forEach(i =>
+        i.classList.remove("rotate-180")
+      );
+
+      if (!isOpen) {
+        answer.classList.remove("hidden");
+        icon.classList.add("rotate-180");
+      }
+    });
   });
-});
-
-
+}
