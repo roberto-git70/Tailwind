@@ -61,3 +61,80 @@
 .footer-icon:hover {
   text-shadow: 0 0 10px rgba(56, 132, 255, 0.4);
 }
+
+/* Nasconde la scrollbar */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Nasconde la scrollbar orizzontale ma mantiene lo scroll */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Wrapper card: serve solo per calcolare la larghezza in JS */
+.otur-card-wrapper {
+  /* niente di speciale qui: la larghezza è definita da Tailwind (w-[360px]) */
+}
+
+/* CARD */
+.otur-card {
+  background: rgba(15, 23, 42, 0.9);            /* bg-slate-900-ish */
+  border: 1px solid rgba(148, 163, 184, 0.22);  /* bordo grigio/blu */
+  border-radius: 22px;
+  padding: 32px;
+  min-height: 190px;                            /* un filo più bassa */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease,
+              transform 0.25s ease, background 0.25s ease;
+}
+
+/* Hover: luminescenza + glow, palette blu */
+.otur-card:hover {
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.35); /* blu glow */
+  border-color: rgba(59, 130, 246, 0.7);
+  background: radial-gradient(circle at top left,
+              rgba(37, 99, 235, 0.18),
+              rgba(15, 23, 42, 0.9));
+  transform: translateY(-6px);                 /* piccolo lift */
+}
+
+/* Badge numerato */
+.otur-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 1);
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  font-size: 0.9rem;
+  color: #e5edff;
+  margin-bottom: 16px;
+}
+
+/* Titolo card (più piccolo di prima) */
+.otur-title {
+  font-size: 1.2rem;        /* ~text-lg */
+  font-weight: 600;
+  color: #f9fafb;           /* quasi bianco */
+  margin-bottom: 10px;
+}
+
+/* Testo card */
+.otur-text {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: rgb(148, 163, 184); /* slate-400 */
+}
+
+/* Un filo di padding in più nella colonna destra,
+   così al hover non "esce" dalla sezione */
+#oturTrack {
+  padding-top: 0.5rem;  /* 8px */
+  padding-bottom: 1.5rem; /* 24px */
+}
+
+
+

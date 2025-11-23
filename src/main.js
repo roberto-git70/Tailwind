@@ -162,3 +162,22 @@ function initFAQAccordion() {
     });
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('#oturTrack');
+  const prevBtn = document.querySelector('#oturPrev');
+  const nextBtn = document.querySelector('#oturNext');
+
+  const cards = track.querySelectorAll('article');
+  if (!cards.length) return;
+
+  const cardWidth = cards[0].getBoundingClientRect().width + 24;
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  });
+});
