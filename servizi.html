@@ -6,633 +6,1059 @@
   <title>MM&R - Servizi</title>
 
   <!-- Favicon Base -->
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16.png">
-<link rel="icon" type="image/png" sizes="24x24" href="/images/favicon/favicon-24.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="/images/favicon/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="24x24" href="/images/favicon/favicon-24.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon/favicon-64.png">
 
-<!-- Icone grandi (browser moderni / manifest / PWA) -->
-<link rel="icon" type="image/png" sizes="256x256" href="/images/favicon/favicon-256.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/favicon-512.png">
+  <!-- Icone grandi (browser moderni / manifest / PWA) -->
+  <link rel="icon" type="image/png" sizes="256x256" href="/images/favicon/favicon-256.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/favicon-512.png">
 
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon-180.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon-180.png">
 
-<!-- Manifest PWA / Android -->
-<link rel="manifest" href="/images/favicon/manifest.webmanifest">
+  <!-- Manifest PWA / Android -->
+  <link rel="manifest" href="/images/favicon/manifest.webmanifest">
 
-<!-- Safari pinned tab -->
-<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#265DFF">
+  <!-- Safari pinned tab -->
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#265DFF">
 
-<!-- Microsoft Tiles -->
-<meta name="msapplication-config" content="/browserconfig.xml">
-<meta name="msapplication-TileColor" content="#ffffff">
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="msapplication-TileColor" content="#ffffff">
 
-<!-- Chrome / Android UI color -->
-<meta name="theme-color" content="#265DFF">
+  <!-- Chrome / Android UI color -->
+  <meta name="theme-color" content="#265DFF">
 
-<!-- ICO fallback per vecchi browser -->
-<link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+  <!-- ICO fallback per vecchi browser -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
 
   <!-- Icone -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
 </head>
 
-<body class="services-page bg-gray-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-300">
+<body class="services-page bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-300">
 
-<!-- NAVBAR -->
-<nav id="navbar"
-     class="fixed top-0 left-0 w-full z-50 backdrop-blur-md 
-            bg-white/70 dark:bg-slate-900/70
-            border-b border-slate-200/60 dark:border-slate-800/70
-            transition-colors">
+  <!-- NAVBAR -->
+  <nav id="navbar"
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-md 
+             bg-white/70 dark:bg-slate-900/70
+             border-b border-slate-200/60 dark:border-slate-800/70
+             transition-colors">
 
-  <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+    <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
 
-    <!-- LOGO -->
-    <a href="/index.html" class="flex items-center gap-2">
-      <img src="/images/MM&R_logo.webp" class="h-7 w-7 rounded-lg shadow" alt="Logo" />
-      <span class="text-[15px] font-semibold text-slate-700 dark:text-slate-200">
-        MM&R<span class="text-blue-600 dark:text-blue-400">Design</span>
-      </span>
-    </a>
+      <!-- LOGO -->
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/images/MM&R_logo.webp" class="h-7 w-7 rounded-lg shadow" alt="Logo" />
+        <span class="text-[15px] font-semibold text-slate-700 dark:text-slate-200">
+          MM&R<span class="text-blue-600 dark:text-blue-400">Design</span>
+        </span>
+      </a>
 
-<!-- MENU DESKTOP -->
-<ul class="hidden md:flex items-center gap-8 text-[14px] font-medium">
-  <li><a href="/index.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Home</a></li>
+      <!-- MENU DESKTOP -->
+      <ul class="hidden md:flex items-center gap-8 text-[14px] font-medium">
+        <li>
+          <a href="/index.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Home
+          </a>
+        </li>
 
-  <li class="relative has-dropdown">
-    <button class="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
-      Servizi <span class="text-xs">▾</span>
-    </button>
+        <li class="relative has-dropdown">
+          <button class="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Servizi <span class="text-xs">▾</span>
+          </button>
 
-    <!-- DROPDOWN -->
-    <div class="dropdown hidden absolute left-0 mt-3 w-44 rounded-xl 
-                border border-slate-300 bg-white/90 
-                dark:border-slate-800 dark:bg-slate-900/95 
-                p-2 shadow-xl backdrop-blur">
-      
-      <a href="/servizi.html" class="block px-3 py-2 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">UI / UX Design</a>
-      <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Siti Web Responsive</a>
-      <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Performance & SEO</a>
-    </div>
-  </li>
+          <!-- DROPDOWN -->
+          <div class="dropdown hidden absolute left-0 mt-3 w-44 rounded-xl 
+                      border border-slate-300 bg-white/90 
+                      dark:border-slate-800 dark:bg-slate-900/95 
+                      p-2 shadow-xl backdrop-blur">
+            <a href="/servizi.html" class="block px-3 py-2 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+              UI / UX Design
+            </a>
+            <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+              Siti Web Responsive
+            </a>
+            <a href="#services" class="block px-3 py-2 mt-1 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+              Performance &amp; SEO
+            </a>
+          </div>
+        </li>
 
-  <li><a href="#contatti" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">Contatti</a></li>
-</ul>
+        <li>
+          <a href="#contatti" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Contatti
+          </a>
+        </li>
+      </ul>
 
-<!-- ICONS + SOCIAL (desktop only) -->
-<div class="hidden md:flex items-center gap-7">
+      <!-- ICONS + SOCIAL (desktop only) -->
+      <div class="hidden md:flex items-center gap-7">
+        <button id="dark-toggle" aria-label="Toggle dark mode"
+                class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+          <i data-lucide="moon" class="w-5 h-5"></i>
+        </button>
 
-  <button id="dark-toggle" aria-label="Toggle dark mode"
+        <a href="#" aria-label="Profilo"
           class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
-    <i data-lucide="moon" class="w-5 h-5"></i>
-  </button>
+          <i data-lucide="user" class="w-5 h-5"></i>
+        </a>
 
-  <a href="#" aria-label="Profilo"
-      class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
-    <i data-lucide="user" class="w-5 h-5"></i>
-  </a>
+        <span class="w-px h-5 bg-slate-700/50"></span>
 
-  <span class="w-px h-5 bg-slate-700/50"></span>
-
-  <a href="#" aria-label="Facebook" class="icon-glow text-slate-400 hover:text-blue-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-  <a href="#" aria-label="Instagram" class="icon-glow text-slate-400 hover:text-pink-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-  <a href="#" aria-label="LinkedIn" class="icon-glow text-slate-400 hover:text-blue-500 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-  <a href="#" aria-label="X" class="icon-glow text-slate-400 hover:text-slate-500 transition"><i data-lucide="square-x" class="w-5 h-5"></i></a>
-
-</div>
-<!-- HAMBURGER MOBILE (aligned right) -->
-<button id="mobileMenuBtn"
-        class="md:hidden text-3xl text-slate-700 dark:text-slate-200 ml-auto">
-  ☰
-</button>
-</div>
-
-<!-- MOBILE MENU (right aligned, matching navbar bg) -->
-<div id="mobileMenu"
-  class="hidden md:hidden absolute top-full right-0 w-full z-50
-        bg-white/70 dark:bg-slate-900/70 backdrop-blur-md
-        border-t border-slate-200 dark:border-slate-800">
-<ul class="px-6 py-4 text-right text-sm space-y-3">
-<li><a href="#hero" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Home</a></li>
-<li><a href="#services" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Servizi</a></li>
-<li><a href="#contatti" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Contatti</a></li>
-</ul>
-</div>
-</nav>
-
-<main class="pt-24 bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-50">
-
-  <!-- HERO SERVIZI -->
-<section class="py-16">
-  <div
-    class="mx-auto max-w-6xl px-6 rounded-[32px] border border-slate-200/70 bg-white/80 shadow-xl 
-            dark:border-slate-800/80 dark:bg-slate-900/80 
-            backdrop-blur-xl flex flex-col lg:flex-row items-center gap-12">
-      
-<!-- Testo -->
-<div class="flex-1 space-y-6">
-  <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium 
-              text-blue-700 dark:bg-blue-500/10 dark:text-blue-300">
-    <span class="h-2 w-2 rounded-full bg-blue-500"></span>
-    Soluzioni digitali su misura
-  </div>
-
-  <div class="flex items-center gap-3">
-    <h1 class="text-3xl md:text-4xl font-semibold leading-tight">
-      Le nostre soluzioni<br class="hidden md:block" />
-      su misura per il tuo business.
-    </h1>
-    <!-- Badge tipo "25h min" -->
-    <span
-      class="hidden md:inline-flex items-center rounded-full border border-blue-500/40 
-              px-4 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 
-              bg-blue-50/80 dark:bg-blue-500/10">
-      focus su performance & UX
-    </span>
-  </div>
-
-  <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 max-w-xl">
-    Strategia, design e sviluppo lavorano insieme per creare interfacce veloci, accessibili
-    e facili da usare. Niente template generici: progettiamo e sviluppiamo ogni sito a codice,
-    in base ai tuoi obiettivi.
-  </p>
-
-  <ul class="space-y-2 text-sm md:text-base text-slate-700 dark:text-slate-200">
-    <li class="flex items-start gap-2">
-      <span class="mt-1 h-1.5 w-4 rounded-full bg-blue-500/80"></span>
-      <span><strong>UI / UX Design</strong> centrato sulle persone, guidato da wireframe e prototipi.</span>
-    </li>
-    <li class="flex items-start gap-2">
-      <span class="mt-1 h-1.5 w-4 rounded-full bg-blue-500/80"></span>
-      <span><strong>Siti Web Aziendali</strong> sviluppati interamente a codice, scalabili e ottimizzati SEO.</span>
-    </li>
-    <li class="flex items-start gap-2">
-      <span class="mt-1 h-1.5 w-4 rounded-full bg-blue-500/80"></span>
-      <span><strong>E-commerce</strong> progettati per la conversione, sicuri e facili da gestire.</span>
-    </li>
-    <li class="flex items-start gap-2">
-      <span class="mt-1 h-1.5 w-4 rounded-full bg-blue-500/80"></span>
-      <span><strong>Performance & SEO</strong> per siti rapidi, stabili e indicizzati correttamente.</span>
-    </li>
-  </ul>
-</div>
-
-<!-- Immagine / mockup -->
-<div class="flex-1 w-full">
-<div
-  class="relative aspect-[4/3] w-full overflow-hidden rounded-[28px] border 
-          border-slate-200/70 bg-slate-900/90 dark:border-slate-800">
-  <!-- Se hai un’immagine reale, sostituisci questo div con un <img> -->
-  <div
-    class="absolute inset-0 bg-gradient-to-br from-blue-500 via-sky-400 to-indigo-500 opacity-70">
-  </div>
-  <div class="relative h-full w-full p-6 flex flex-col justify-between">
-    <div class="space-y-2">
-      <p class="inline-flex items-center gap-2 text-xs font-medium text-blue-100/90">
-        <span class="h-1.5 w-1.5 rounded-full bg-emerald-300"></span>
-        Dashboard progetto in tempo reale
-      </p>
-      <h3 class="text-lg font-semibold text-white">
-        Design pulito, codice solido.
-      </h3>
-      <p class="text-xs text-slate-100/80 max-w-xs">
-        Ogni pagina viene progettata in Figma, validata con te e poi sviluppata in HTML, 
-        CSS e JS senza page builder, per performance e controllo totale.
-      </p>
-    </div>
-
-<div class="grid grid-cols-2 gap-3 text-[11px] text-slate-100/90">
-  <div
-    class="rounded-2xl bg-slate-900/40 px-3 py-2 border border-slate-800/70">
-    <p class="font-medium">Wireframe & prototipi</p>
-    <p class="text-[10px] text-slate-300/80 mt-1">
-      Visualizzi il flusso completo prima di scrivere una riga di codice.
-    </p>
-  </div>
-  <div
-    class="rounded-2xl bg-slate-900/40 px-3 py-2 border border-slate-800/70">
-    <p class="font-medium">Test su device reali</p>
-    <p class="text-[10px] text-slate-300/80 mt-1">
-      Layout responsive verificati su mobile, tablet e desktop.
-    </p>
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
-    </div>
-  </section>
-
-
-<!-- CAROUSELL -->
-
-<!-- OtuR – Processo -->
-<section id="otur-process" class="relative py-24 bg-white dark:bg-slate-950 transition-colors">
-<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-start">
-
-<!-- COLONNA SINISTRA -->
-<div class="md:w-[32%] w-full">
-  <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white mb-5">
-    OtuR
-  </h2>
-
-  <p class="text-slate-600 dark:text-slate-300 text-base md:text-lg leading-relaxed max-w-md">
-    Dall’ideazione al lancio, realizziamo siti web intuitivi e visivamente accattivanti,
-    su misura per il tuo marchio.
-  </p>
-
-<!-- FRECCE -->
-<div class="flex gap-4 mt-10">
-  <button id="oturPrev"
-    class="w-12 h-12 rounded-full border border-slate-300 dark:border-white/10
-            flex items-center justify-center 
-            text-slate-600 dark:text-slate-200
-            bg-white dark:bg-white/5
-            hover:bg-slate-100 dark:hover:bg-white/10
-            transition">
-    <i data-lucide="arrow-left" class="w-4 h-4"></i>
-  </button>
-
-  <button id="oturNext"
-    class="w-12 h-12 rounded-full border border-slate-300 dark:border-white/10
-            flex items-center justify-center 
-            text-slate-600 dark:text-slate-200
-            bg-white dark:bg-white/5
-            hover:bg-slate-100 dark:hover:bg-white/10
-            transition">
-    <i data-lucide="arrow-right" class="w-4 h-4"></i>
-  </button>
-</div>
-</div>
-
-<!-- COLONNA CARDS -->
-<div class="md:w-[68%] w-full">
-
-<!-- TRACK -->
-<div id="oturTrack"
-  class="flex gap-6 overflow-x-auto overflow-y-visible scroll-smooth no-scrollbar pt-2 pb-8">
-
-<!-- CARD TEMPLATE -->
-<article class="flex-none w-[320px] sm:w-[360px]">
-  <div class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10
-              backdrop-blur-xl rounded-2xl p-8 h-[200px]
-              hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,112,255,0.25)]
-              hover:border-blue-500/40 transition">
-
-    <span class="inline-flex items-center justify-center
-                  bg-slate-200 dark:bg-white/10
-                  text-slate-700 dark:text-white
-                  w-8 h-8 text-sm font-medium rounded-full mb-4">
-      1
-    </span>
-
-    <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-      Analisi & Strategia
-    </h3>
-
-    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
-      Studiamo il tuo brand e definiamo gli obiettivi per creare una struttura logica efficace.
-    </p>
-  </div>
-</article>
-
-<!-- CARD 2 -->
-<article class="flex-none w-[320px] sm:w-[360px]">
-  <div class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10
-              backdrop-blur-xl rounded-2xl p-8 h-[200px]
-              hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,112,255,0.25)]
-              hover:border-blue-500/40 transition">
-
-    <span class="inline-flex items-center justify-center
-                  bg-slate-200 dark:bg-white/10
-                  text-slate-700 dark:text-white
-                  w-8 h-8 text-sm font-medium rounded-full mb-4">
-      2
-    </span>
-
-<h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-  Mappa del sito
-</h3>
-
-<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
-  Creiamo una struttura chiara che collega pagine e contenuti con un flusso naturale.
-</p>
-</div>
-</article>
-
-<!-- CARD 3 -->
-<article class="flex-none w-[320px] sm:w-[360px]">
-<div class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10
-          backdrop-blur-xl rounded-2xl p-8 h-[200px]
-          hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,112,255,0.25)]
-          hover:border-blue-500/40 transition">
-
-<span class="inline-flex items-center justify-center
-              bg-slate-200 dark:bg-white/10
-              text-slate-700 dark:text-white
-              w-8 h-8 text-sm font-medium rounded-full mb-4">
-  3
-</span>
-
-  <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-    Wireframe
-  </h3>
-
-  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
-    I wireframe delineano layout e funzionalità fornendo basi solide per la progettazione.
-  </p>
-</div>
-</article>
-
-<!-- …altre card se servono -->
-</div>
-</div>
-</div>
-</section>
-
-<!-- CAROUSELL END-->
-
-<section class="py-28 bg-slate-100 dark:bg-slate-950 transition-colors">
-  <div class="max-w-6xl mx-auto px-6">
-
-    <!-- Titolo sezione -->
-    <div class="mb-20">
-      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
-        UI / UX Design
-      </h2>
-      <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-        Creiamo interfacce moderne, fluide e su misura, progettate per offrire un’esperienza 
-        impeccabile su ogni dispositivo. Ogni dettaglio è pensato per migliorare la chiarezza,
-        la navigazione e la conversione.
-      </p>
-    </div>
-
-    <!-- Grid stile Apple -->
-    <div class="grid md:grid-cols-2 gap-16">
-
-      <!-- IMMAGINE / PLACEHOLDER Apple-style -->
-      <div class="relative">
-        <div class="aspect-square rounded-3xl bg-gradient-to-br from-blue-600/20 to-blue-400/10 dark:from-blue-500/20 dark:to-blue-300/10
-                    backdrop-blur-xl border border-white/10 shadow-2xl flex items-center justify-center">
-          <i data-lucide="palette" class="w-24 h-24 text-blue-600 dark:text-blue-400"></i>
-        </div>
+        <a href="#" aria-label="Facebook" class="icon-glow text-slate-400 hover:text-blue-400 transition">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="Instagram" class="icon-glow text-slate-400 hover:text-pink-400 transition">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="icon-glow text-slate-400 hover:text-blue-500 transition">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="X" class="icon-glow text-slate-400 hover:text-slate-500 transition">
+          <i data-lucide="square-x" class="w-5 h-5"></i>
+        </a>
       </div>
 
-      <!-- TESTO DETTAGLIATO -->
-      <div class="space-y-12">
-
-        <!-- Punto 1 -->
-        <div>
-          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
-            Wireframe & Prototipi interattivi
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400">
-            Prima di passare alla fase di sviluppo, creiamo prototipi interattivi e wireframe 
-            professionali che consentono di vedere in anticipo l’esperienza utente. Questo riduce 
-            errori, migliora i flussi e accelera il processo decisionale.
-          </p>
-        </div>
-
-        <!-- Punto 2 -->
-        <div>
-          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
-            Design System personalizzati
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400">
-            Creiamo sistemi di design coerenti, scalabili e modulari. Dalle palette colori alle 
-            tipografie, dai componenti UI ai layout: tutto è sviluppato per mantenere coerenza e 
-            velocizzare lo sviluppo futuro.
-          </p>
-        </div>
-
-        <!-- Punto 3 -->
-        <div>
-          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
-            Approccio Mobile-first
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400">
-            Progettiamo ogni interfaccia partendo dai dispositivi mobili, garantendo navigazione 
-            fluida, tempi di caricamento ridotti e un’esperienza ottimizzata su smartphone e tablet.
-          </p>
-        </div>
-
-        <!-- Punto 4 -->
-        <div>
-          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">
-            UX basata su best practice moderne
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400">
-            Analizziamo comportamenti, pattern moderni e principi psicologici per progettare 
-            esperienze semplici, intuitive e piacevoli. Ogni decisione è supportata da anni di 
-            ricerca nel campo della user experience.
-          </p>
-        </div>
-
-      </div>
+      <!-- HAMBURGER MOBILE -->
+      <button id="mobileMenuBtn"
+              class="md:hidden text-3xl text-slate-700 dark:text-slate-200 ml-auto">
+        ☰
+      </button>
     </div>
 
-  </div>
-</section>
-
-<section class="py-32 bg-slate-100 dark:bg-slate-950 transition-colors">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-
-    <!-- TESTO -->
-    <div>
-      <p class="uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 text-xs mb-4">
-        UI / UX Design
-      </p>
-
-      <h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
-        Progettiamo interfacce intuitive, eleganti e su misura
-      </h2>
-
-      <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-        Il design non è solo estetica: è comunicazione, struttura, equilibrio.
-        Ogni pagina deve accompagnare l’utente con naturalezza, ridurre la frizione
-        e valorizzare il tuo brand.
-      </p>
-
-      <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-300 text-[16px]">
-        <li>• Wireframe ad alta definizione</li>
-        <li>• Design System personalizzati</li>
-        <li>• Flussi utente fluidi e chiari</li>
-        <li>• Prototipi interattivi realistici</li>
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+      class="hidden md:hidden absolute top-full right-0 w-full z-50
+            bg-white/70 dark:bg-slate-900/70 backdrop-blur-md
+            border-t border-slate-200 dark:border-slate-800">
+      <ul class="px-6 py-4 text-right text-sm space-y-3">
+        <li>
+          <a href="/index.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/servizi.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+            Servizi
+          </a>
+        </li>
+        <li>
+          <a href="#contatti" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+            Contatti
+          </a>
+        </li>
       </ul>
     </div>
+  </nav>
 
-    <!-- IMMAGINE -->
-    <div class="relative">
-      <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl 
-                  bg-white/10 dark:bg-white/5 border border-white/10 backdrop-blur-xl 
-                  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.15)] transition-all duration-300">
-        <img src="/images/ux-preview.webp"
-             class="w-full h-full object-cover" alt="UI UX Design Preview" />
+  <!-- CONTENUTO PRINCIPALE -->
+  <main class="pt-24 bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-50">
+
+    <!-- HERO SERVIZI -->
+    <section id="hero-servizi" class="py-16">
+      <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr,0.9fr] gap-10 items-center">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-3">
+            Cosa possiamo fare per te
+          </p>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-4">
+            Servizi digitali chiari, <span class="text-blue-600 dark:text-blue-400">su misura</span> per il tuo business.
+          </h1>
+          <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 max-w-xl">
+            Progettiamo e sviluppiamo prodotti web professionali: siti aziendali, e-commerce,
+            interfacce su misura e ottimizzazioni delle performance. Niente pacchetti rigidi:
+            partiamo dai tuoi obiettivi e costruiamo la soluzione intorno a loro.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-4">
+            <a href="#contatti"
+                class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full
+                        bg-blue-600 text-white shadow-lg shadow-blue-600/30
+                        hover:bg-blue-500 transition">
+              Prenota una call
+            </a>
+            <a href="/index.html#case-study"
+                class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full
+                        border border-slate-300 text-slate-800 bg-white/70
+                        hover:border-blue-500 hover:text-blue-600
+                        dark:bg-slate-900/70 dark:border-slate-700 dark:text-slate-50
+                        dark:hover:border-blue-400 dark:hover:text-blue-300 transition">
+              Guarda un progetto reale
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div
+  class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+            <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
+              In breve, cosa facciamo
+            </h2>
+            <dl class="space-y-3 text-sm">
+              <div class="flex gap-3">
+                <dt class="mt-1 text-blue-600 dark:text-blue-400">
+                  <i data-lucide="palette" class="w-4 h-4"></i>
+                </dt>
+                <dd>
+                  <span class="font-medium">UI / UX Design</span><br>
+                  Architettura, wireframe, prototipi interattivi e design system completi.
+                </dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="mt-1 text-blue-600 dark:text-blue-400">
+                  <i data-lucide="monitor-smartphone" class="w-4 h-4"></i>
+                </dt>
+                <dd>
+                  <span class="font-medium">Siti web aziendali</span><br>
+                  Siti performanti, responsive e facilmente aggiornabili.
+                </dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="mt-1 text-blue-600 dark:text-blue-400">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                </dt>
+                <dd>
+                  <span class="font-medium">E-commerce</span><br>
+                  Store ottimizzati per la conversione e facili da gestire.
+                </dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="mt-1 text-blue-600 dark:text-blue-400">
+                  <i data-lucide="rocket" class="w-4 h-4"></i>
+                </dt>
+                <dd>
+                  <span class="font-medium">Performance &amp; SEO</span><br>
+                  Core Web Vitals, SEO tecnica e tempi di caricamento ridotti.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
+    <!-- PANORAMICA MACRO-SERVIZI -->
+     
+    <section id="services" class="py-24 bg-slate-50/60 dark:bg-slate-950/40">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-2">
+              Quattro pilastri
+            </p>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
+              Tutto ciò che ti serve per un prodotto digitale completo.
+            </h2>
+          </div>
+          <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300 max-w-xl">
+            Ogni servizio è modulare: possiamo partire da una sola area (ad esempio solo il design)
+            oppure seguire l'intero ciclo, dal concept al rilascio.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <!-- UI/UX -->
+          <article class="group h-full rounded-2xl bg-white/80 border border-slate-200/80 px-5 py-5
+                           dark:bg-slate-900/80 dark:border-slate-800 hover:border-blue-500/60
+                           hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]
+                           transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center
+                          dark:bg-blue-500/10 dark:text-blue-400">
+                <i data-lucide="palette" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-semibold text-sm">UI / UX Design</h3>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
+              <li>Ricerca, user-flow e architettura informativa</li>
+              <li>Wireframe, prototipi e test con utenti</li>
+              <li>Design system e libreria componenti</li>
+            </ul>
+          </article>
+
+          <!-- Siti web -->
+          <article class="group h-full rounded-2xl bg-white/80 border border-slate-200/80 px-5 py-5
+                           dark:bg-slate-900/80 dark:border-slate-800 hover:border-blue-500/60
+                           hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]
+                           transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center
+                          dark:bg-blue-500/10 dark:text-blue-400">
+                <i data-lucide="monitor-smartphone" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-semibold text-sm">Siti Web Aziendali</h3>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
+              <li>Sviluppo interamente a codice, senza builder pesanti</li>
+              <li>Layout responsive e ottimizzati per mobile</li>
+              <li>Integrazione form, newsletter e analytics</li>
+            </ul>
+          </article>
+
+          <!-- E-commerce -->
+          <article class="group h-full rounded-2xl bg-white/80 border border-slate-200/80 px-5 py-5
+                           dark:bg-slate-900/80 dark:border-slate-800 hover:border-blue-500/60
+                           hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]
+                           transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center
+                          dark:bg-blue-500/10 dark:text-blue-400">
+                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-semibold text-sm">E-commerce</h3>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
+              <li>Cataloghi prodotti, varianti, categorie e filtri</li>
+              <li>Checkout ottimizzati per conversione e sicurezza</li>
+              <li>Integrazione con sistemi di pagamento e gestione ordini</li>
+            </ul>
+          </article>
+
+          <!-- Performance -->
+          <article class="group h-full rounded-2xl bg-white/80 border border-slate-200/80 px-5 py-5
+                           dark:bg-slate-900/80 dark:border-slate-800 hover:border-blue-500/60
+                           hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]
+                           transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center
+                          dark:bg-blue-500/10 dark:text-blue-400">
+                <i data-lucide="rocket" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-semibold text-sm">Performance &amp; SEO</h3>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
+              <li>Audit Core Web Vitals e riduzione tempi di caricamento</li>
+              <li>SEO tecnica, struttura URL e dati strutturati</li>
+              <li>Monitoraggio post-lancio e ottimizzazioni continue</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUOVA SEZIONE: DIGITAL MARKETING SERVICES (CON DARK/LIGHT MODE) -->
+    <section class="bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-white min-h-screen py-20 px-6 md:px-12 lg:px-20 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
+            <!-- Badge -->
+            <div class="flex justify-center md:justify-start mb-12">
+                <span class="inline-block px-6 py-3 bg-slate-200 dark:bg-slate-800 rounded-full text-sm font-medium text-slate-800 dark:text-slate-200 transition-colors duration-300">
+                    What Services We Provide
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                <!-- Left Side - Hero Text -->
+                <div class="relative flex flex-col justify-center">
+                    <div class="space-y-6">
+                        <h2 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight">
+                            <span class="text-slate-400 dark:text-slate-500">Digital marketing</span>
+                            <br>
+                            <span class="text-slate-900 dark:text-white font-normal">services aligned</span>
+                            <br>
+                            <span class="text-slate-900 dark:text-white font-normal">with your goals</span>
+                        </h2>
+                        
+                        <a href="#services" class="inline-flex items-center gap-3 text-lg font-medium hover:gap-5 transition-all duration-300 group mt-8 text-slate-900 dark:text-white">
+                            <span class="border-b border-slate-900 dark:border-white pb-1">View All Services</span>
+                            <svg class="w-8 h-8 transition-transform duration-300 group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Service Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <!-- Card 1 -->
+                    <div class="group p-8 bg-white/80 dark:bg-slate-900/50 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:bg-white dark:hover:bg-slate-900 cursor-pointer shadow-[0_0_20px_rgba(37,99,235,0.06)] hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]">
+                        <!-- Icon -->
+                        <div class="mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 10 L54 22 L54 46 L32 58 L10 46 L10 22 Z" stroke="#FF6B35" stroke-width="2" fill="none"/>
+                                <path d="M32 10 L32 58" stroke="#FF6B35" stroke-width="2"/>
+                                <path d="M10 22 L54 46" stroke="#FF6B35" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 leading-tight text-slate-900 dark:text-white">
+                            Marketing strategy and Data Solutions
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            We create mind-blowing visuals, brands, websites and products that help startups and innovative companies gain more.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group p-8 bg-white/80 dark:bg-slate-900/50 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:bg-white dark:hover:bg-slate-900 cursor-pointer shadow-[0_0_20px_rgba(37,99,235,0.06)] hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]">
+                        <!-- Icon -->
+                        <div class="mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 15 L32 10 L44 15 L44 30 L32 35 L20 30 Z" stroke="#FF6B35" stroke-width="2" fill="none"/>
+                                <path d="M32 35 L44 30 L44 45 L32 50" stroke="#FF6B35" stroke-width="2"/>
+                                <path d="M32 50 L20 45 L20 30" stroke="#FF6B35" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 leading-tight text-slate-900 dark:text-white">
+                            Data Analytics and Solutions
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            We create mind-blowing visuals, brands, websites and products that help startups and innovative companies gain more.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group p-8 bg-white/80 dark:bg-slate-900/50 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:bg-white dark:hover:bg-slate-900 cursor-pointer shadow-[0_0_20px_rgba(37,99,235,0.06)] hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]">
+                        <!-- Icon -->
+                        <div class="mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 20 L46 20 L46 44 L18 44 Z" stroke="#FF6B35" stroke-width="2" fill="none"/>
+                                <path d="M18 28 L46 28" stroke="#FF6B35" stroke-width="2"/>
+                                <path d="M26 20 L26 44" stroke="#FF6B35" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 leading-tight text-slate-900 dark:text-white">
+                            Website Design and Development
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            We create mind-blowing visuals, brands, websites and products that help startups and innovative companies gain more.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group p-8 bg-white/80 dark:bg-slate-900/50 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:bg-white dark:hover:bg-slate-900 cursor-pointer shadow-[0_0_20px_rgba(37,99,235,0.06)] hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]">
+                        <!-- Icon -->
+                        <div class="mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 25 L32 15 L49 25 L49 45 L32 55 L15 45 Z" stroke="#FF6B35" stroke-width="2" fill="none"/>
+                                <path d="M32 15 L32 35 L49 45" stroke="#FF6B35" stroke-width="2"/>
+                                <path d="M32 35 L15 45" stroke="#FF6B35" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 leading-tight text-slate-900 dark:text-white">
+                            Business Strategy And Solution
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            We create mind-blowing visuals, brands, websites and products that help startups and innovative companies gain more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- SEZIONI DETTAGLIO SERVIZIO (BLOCCHI ALTERNATI) -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6 space-y-16">
+
+        <!-- Blocco 1: UX/UI -->
+        <article class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <article class="fade-in group p-6 rounded-2xl 
+  bg-white/70 dark:bg-white/5 
+  border border-white/10 
+  backdrop-blur-xl 
+  transition-all duration-300 
+  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
+  hover:border-blue-500/40">
+  
+  <div class="text-blue-600 dark:text-blue-400">
+    <i data-lucide="palette" class="w-7 h-7"></i>
   </div>
+            <p class="text-xs uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 mb-2">
+              Servizio 01
+            </p>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+              UI / UX Design orientato al risultato.
+            </h2>
+            <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300 mb-4">
+              Partiamo dagli obiettivi di business e dai bisogni degli utenti. Progettiamo
+              esperienze fluide che guidano le persone verso l'azione, riducendo frizioni
+              e dubbi lungo il percorso.
+            </p>
+            <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-1.5 mb-5">
+              <li class="flex gap-2"><span>•</span><span>Workshop iniziale e definizione delle persone chiave.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Wireframe low-fi per strutturare i contenuti in modo chiaro.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Prototipi interattivi per testare i flussi prima dello sviluppo.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Design system scalabile con componenti riutilizzabili.</span></li>
+            </ul>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Ideale per: nuovi progetti digitali, redesign completi, creazione di librerie UI
+              condivise tra più team.
+            </p>
+          </div>
+
+          <div class="md:justify-self-end">
+
+      <div
+  class="rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-4
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+                        
+              <h3 class="text-sm font-semibold mb-3 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+                Deliverable principali
+              </h3>
+              <div class="grid sm:grid-cols-2 gap-3 text-[13px] text-slate-700 dark:text-slate-300">
+                <div>
+                  <p class="font-medium mb-0.5">Artefatti UX</p>
+                  <p>User-flow, sitemap, wireframe, prototipi cliccabili.</p>
+                </div>
+                <div>
+                  <p class="font-medium mb-0.5">Libreria UI</p>
+                  <p>Componenti documentati, stili tipografici, palette colore.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blocco 2: Siti Web -->
+        <article class="grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+          <div class="md:order-2">
+            <p class="text-xs uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 mb-2">
+              Servizio 02
+            </p>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+              Siti web aziendali veloci, moderni e facili da gestire.
+            </h2>
+            <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300 mb-4">
+              Sviluppiamo siti completamente a codice, senza dipendere da page builder
+              pesanti. Questo ci permette di controllare ogni dettaglio in termini di
+              performance, accessibilità e SEO.
+            </p>
+            <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-1.5 mb-5">
+              <li class="flex gap-2"><span>•</span><span>Layout responsive progettati mobile-first.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Integrazioni con servizi esterni (form, CRM, newsletter).</span></li>
+              <li class="flex gap-2"><span>•</span><span>CMS leggero o contenuti statici in base alle reali necessità.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Setup di analytics, eventi e tracciamenti fondamentali.</span></li>
+            </ul>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Ideale per: siti istituzionali, landing page di campagne, pagine prodotto evolute.
+            </p>
+          </div>
+
+          <div class="md:order-1 md:justify-self-start">
+ <div
+  class="rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-4
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+              <h3 class="text-sm font-semibold mb-3 flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+                Cosa è incluso
+              </h3>
+              <div class="grid sm:grid-cols-2 gap-3 text-[13px] text-slate-700 dark:text-slate-300">
+                <div>
+                  <p class="font-medium mb-0.5">Pagina su misura</p>
+                  <p>Home, pagine interne e moduli contatto personalizzati.</p>
+                </div>
+                <div>
+                  <p class="font-medium mb-0.5">Documentazione</p>
+                  <p>Guide rapide per l'aggiornamento dei contenuti.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blocco 3: E-commerce -->
+        <article class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="text-xs uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 mb-2">
+              Servizio 03
+            </p>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+              E-commerce progettati per vendere, non solo per esistere online.
+            </h2>
+            <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300 mb-4">
+              Ci concentriamo sull'esperienza d'acquisto: dalla ricerca prodotto al checkout.
+              Strutturiamo al meglio categorie, schede prodotto e micro-copy per aumentare
+              la conversione e ridurre gli abbandoni.
+            </p>
+            <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-1.5 mb-5">
+              <li class="flex gap-2"><span>•</span><span>Analisi del funnel e definizione delle metriche chiave.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Ottimizzazione della navigazione e dei filtri di ricerca.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Checkout semplice, chiaro e sicuro.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Setup tracciamenti per ROAS e performance delle campagne.</span></li>
+            </ul>
+          </div>
+
+          <div class="md:justify-self-end">
+     <div
+  class="rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-4
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+              <h3 class="text-sm font-semibold mb-3 flex items-center gap-2">
+                <i data-lucide="bar-chart-3" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+                Focus conversione
+              </h3>
+              <p class="text-[13px] text-slate-700 dark:text-slate-300">
+                Non ci limitiamo a "mettere online" uno shop. Progettiamo la struttura e
+                le interazioni per ridurre i click inutili, dare fiducia e accompagnare
+                l'utente fino alla conferma d'ordine.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blocco 4: Performance & SEO -->
+        <article class="grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+          <div class="md:order-2">
+            <p class="text-xs uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 mb-2">
+              Servizio 04
+            </p>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+              Performance e SEO tecnica per siti che durano nel tempo.
+            </h2>
+            <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300 mb-4">
+              Analizziamo il sito esistente (o il nuovo progetto) e interveniamo su codice,
+              asset e configurazioni per ottenere risultati concreti sulle metriche di velocità
+              e sulla visibilità organica.
+            </p>
+            <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-1.5 mb-5">
+              <li class="flex gap-2"><span>•</span><span>Audit tecnico con report dettagliato di problemi e priorità.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Refactoring del codice e ottimizzazione degli asset.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Setup SEO tecnica: sitemap, robots, meta, dati strutturati.</span></li>
+              <li class="flex gap-2"><span>•</span><span>Monitoraggio post-intervento e suggerimenti continuativi.</span></li>
+            </ul>
+          </div>
+
+          <div class="md:order-1 md:justify-self-start">
+    <div
+  class="rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-4
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+         <h3 class="text-sm font-semibold mb-3 flex items-center gap-2">
+                <i data-lucide="activity" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+                Core Web Vitals, non solo numeri
+              </h3>
+              <p class="text-[13px] text-slate-700 dark:text-slate-300">
+                Lavoriamo su LCP, CLS, INP e metriche reali raccolte dal campo, non solo sui
+                punteggi sintetici. L'obiettivo è migliorare la percezione di velocità e
+                ridurre le frizioni durante la navigazione.
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </div>
 </section>
 
-<section class="py-32 bg-white dark:bg-slate-900 transition-colors">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+<!-- CTA con doppio gradiente morbido-->
 
-    <!-- IMMAGINE -->
-    <div class="order-1 lg:order-none">
-      <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl 
-                  bg-white/10 dark:bg-white/5 border border-white/10 backdrop-blur-xl
-                  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.15)] transition-all duration-300">
-        <img src="/images/dev-preview.webp"
-             class="w-full h-full object-cover" alt="Development Preview" />
-      </div>
-    </div>
+<section id="hero" class="relative flex items-center py-28 text-slate-900 dark:text-slate-50 bg-slate-100 dark:bg-slate-950 overflow-hidden">
 
-    <!-- TESTO -->
-    <div>
-      <p class="uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 text-xs mb-4">
-        Sviluppo Web
-      </p>
-
-      <h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
-        Siti web su misura. Zero template, zero compromessi
-      </h2>
-
-      <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-        Ogni progetto viene sviluppato interamente a codice per garantire performance,
-        stabilità e totale libertà creativa. Nessun page builder, nessun peso superfluo.
-      </p>
-
-      <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-300 text-[16px]">
-        <li>• Layout responsive fluidi</li>
-        <li>• Ottimizzazione del DOM e del CSS</li>
-        <li>• Animazioni leggere e progressive</li>
-        <li>• Performance superiori ai builder</li>
-      </ul>
-    </div>
-
+  <div class="absolute inset-0 pointer-events-none z-0">
+    <img src="/images/img_hero_dark.webp" alt="Hero dark" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 dark:opacity-35 opacity-0">
+    <img src="/images/img_hero_light.png" alt="Hero light" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 opacity-35 dark:opacity-0">
   </div>
-</section>
 
-<section class="py-36 bg-slate-100 dark:bg-slate-950 transition-colors">
-  <div class="max-w-4xl mx-auto px-6 text-center">
+  <div class="absolute top-0 left-0 w-full h-32 z-10
+              bg-gradient-to-b 
+              from-slate-100 via-slate-100/80 to-transparent
+              dark:from-slate-950 dark:via-slate-950/80 dark:to-transparent">
+  </div>
 
-    <p class="uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 text-xs mb-4">
-      Performance & SEO
-    </p>
+  <div class="absolute bottom-0 left-0 w-full h-32 z-10
+              bg-gradient-to-t 
+              from-slate-100 via-slate-100/80 to-transparent
+              dark:from-slate-950 dark:via-slate-950/80 dark:to-transparent">
+  </div>
 
-    <h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
-      Velocità, stabilità, visibilità: il cuore di un sito professionale
+  <div class="relative z-20 text-center max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+      Vuoi dare una svolta al tuo progetto digitale?
     </h2>
 
-    <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-      Ogni sito è progettato per raggiungere punteggi elevati nei Core Web Vitals,
-      garantire caricamenti rapidi e dare al tuo brand la massima competitività sui motori di ricerca.
+    <p class="mt-5 text-slate-600 dark:text-slate-400 text-lg">
+      Una call diretta per capire il tuo progetto e costruire qualcosa che funzioni davvero.
     </p>
-  </div>
 
-  <!-- IMMAGINE FULL-WIDTH -->
-  <div class="max-w-6xl mx-auto px-6 mt-16">
-    <div class="aspect-[21/9] rounded-2xl overflow-hidden shadow-xl 
-                bg-white/10 dark:bg-white/5 border border-white/10 backdrop-blur-xl
-                hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.15)] transition-all duration-300">
-      <img src="/images/performance-hero.webp"
-           class="w-full h-full object-cover" alt="Performance Preview" />
-    </div>
-  </div>
-
-</section>
-
-
-
-
-
-
-
-
-<!-- HERO -->
-<section class="pt-32 pb-20 text-center">
-  <h1 class="text-4xl md:text-5xl font-semibold">
-    Le nostre soluzioni su misura
-  </h1>
-  <p class="mt-4 text-slate-600 dark:text-slate-400 text-base md:text-lg">
-    Strategie, design e sviluppo costruiti per far crescere la tua attività.
-  </p>
-</section>
-
-<!-- SERVIZI -->
-<section class="max-w-6xl mx-auto px-6 pb-24 space-y-16">
-
-  <!-- GRID -->
-  <div class="grid md:grid-cols-2 gap-10">
-
-    <!-- CARD -->
-    <div class="group p-8 rounded-2xl 
-                bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10
-                backdrop-blur-md
-                transition-all duration-300
-                hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
-      
-      <div class="text-blue-600 dark:text-blue-400">
-        <i data-lucide="palette" class="w-8 h-8"></i>
-      </div>
-      <h3 class="mt-4 text-xl font-semibold">UI / UX Design</h3>
-      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
-        <li>• Wireframe & prototipi interattivi</li>
-        <li>• Design System personalizzati</li>
-        <li>• Mobile-first design</li>
-        <li>• UX basata su best practice moderne</li>
-      </ul>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="group p-8 rounded-2xl bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10 backdrop-blur-md transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
-      <div class="text-blue-600 dark:text-blue-400">
-        <i data-lucide="monitor-smartphone" class="w-8 h-8"></i>
-      </div>
-      <h3 class="mt-4 text-xl font-semibold">Siti Web Aziendali</h3>
-      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
-        <li>• Codice pulito (HTML/CSS/JS)</li>
-        <li>• SEO tecnica</li>
-        <li>• Struttura scalabile</li>
-        <li>• Prestazioni elevate</li>
-      </ul>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="group p-8 rounded-2xl bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10 backdrop-blur-md transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
-      <div class="text-blue-600 dark:text-blue-400">
-        <i data-lucide="shopping-cart" class="w-8 h-8"></i>
-      </div>
-      <h3 class="mt-4 text-xl font-semibold">E-commerce</h3>
-      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
-        <li>• Design ottimizzato per la conversione</li>
-        <li>• Gestione prodotti e categorie</li>
-        <li>• Sicurezza & performance</li>
-      </ul>
-    </div>
-
-    <!-- CARD 4 -->
-    <div class="group p-8 rounded-2xl bg-white/70 dark:bg-white/5 border border-slate-200/60 dark:border-white/10 backdrop-blur-md transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_5px_rgba(0,112,255,0.25)]">
-      <div class="text-blue-600 dark:text-blue-400">
-        <i data-lucide="rocket" class="w-8 h-8"></i>
-      </div>
-      <h3 class="mt-4 text-xl font-semibold">Performance & SEO</h3>
-      <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
-        <li>• Ottimizzazione Core Web Vitals</li>
-        <li>• SEO tecnica</li>
-        <li>• Miglioramento tempi di caricamento</li>
-      </ul>
-    </div>
+    <a href="#contatti"
+      class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800 
+            px-10 py-4 text-base font-medium text-blue-600 dark:text-blue-400
+            shadow-xl shadow-blue-500/10 dark:shadow-blue-500/20
+            ring-1 ring-slate-200 dark:ring-slate-700
+            hover:shadow-blue-500/30 hover:-translate-y-0.5
+            transition-all">
+      Prenota una call gratuita
+    </a>
 
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- CTA con doppio gradiente morbido END-->
 
-<footer class="bg-white dark:bg-slate-950">
+    <!-- PROCESSO OTUR (CAROSELLO) -->
+    <section id="otur-process" class="relative py-20">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-start">
+
+        <!-- Colonna titolo -->
+        <div class="md:w-[32%] w-full">
+          <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">
+            OtuR
+          </h2>
+          <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300">
+            Il nostro processo in quattro fasi principali, dal concept al rilascio.
+            Ogni fase è modulare: possiamo intervenire solo dove serve davvero.
+          </p>
+
+          <div class="flex gap-4 mt-8">
+            <button id="oturPrev" type="button" aria-label="Fase precedente"
+                    class="w-11 h-11 rounded-full bg-slate-900 text-slate-100 flex items-center justify-center
+                           hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
+                           shadow-md shadow-slate-900/20 dark:shadow-slate-900/40 transition">
+              <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            </button>
+            <button id="oturNext" type="button" aria-label="Fase successiva"
+                    class="w-11 h-11 rounded-full bg-slate-900 text-slate-100 flex items-center justify-center
+                           hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
+                           shadow-md shadow-slate-900/20 dark:shadow-slate-900/40 transition">
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Track cards -->
+        <div class="md:w-[68%] w-full">
+          <div id="oturTrack"
+              class="flex gap-6 overflow-x-auto overflow-y-visible scroll-smooth no-scrollbar pt-2 pb-6">
+
+            <!-- Card 1 -->
+            <article class="flex-none w-[320px] sm:w-[360px]">
+              <div
+              
+  class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+                <span
+                  class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full
+                         bg-blue-50 text-[13px] font-medium text-blue-600
+                         dark:bg-blue-500/15 dark:text-blue-300">
+                  1
+                </span>
+                <h3 class="text-[17px] font-semibold mb-2">Analisi &amp; Strategia</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300">
+                  Workshop iniziale, analisi degli obiettivi, definizione del perimetro e
+                  delle priorità. Usiamo questi input per tracciare la roadmap del progetto.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="flex-none w-[320px] sm:w-[360px]">
+              <div
+
+  class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+                <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full
+                             bg-blue-50 text-[13px] font-medium text-blue-600
+                             dark:bg-blue-500/15 dark:text-blue-300">
+                  2
+                </span>
+                <h3 class="text-[17px] font-semibold mb-2">Mappa del sito &amp; UX</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300">
+                  Organizziamo i contenuti, costruiamo gli user-flow e prepariamo
+                  wireframe navigabili per validare l'esperienza prima di passare al visual.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="flex-none w-[320px] sm:w-[360px]">
+              <div
+  class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+                <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full
+                             bg-blue-50 text-[13px] font-medium text-blue-600
+                             dark:bg-blue-500/15 dark:text-blue-300">
+                  3
+                </span>
+                <h3 class="text-[17px] font-semibold mb-2">UI Design &amp; sviluppo</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300">
+                  Applichiamo il design system, sviluppiamo a codice e integriamo
+                  tutte le funzionalità necessarie, mantenendo il progetto leggero e pulito.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="flex-none w-[320px] sm:w-[360px]">
+<div
+  class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+                <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full
+                             bg-blue-50 text-[13px] font-medium text-blue-600
+                             dark:bg-blue-500/15 dark:text-blue-300">
+                  4
+                </span>
+                <h3 class="text-[17px] font-semibold mb-2">Test, rilascio &amp; supporto</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300">
+                  Testiamo il prodotto su browser e dispositivi reali, curiamo il rilascio
+                  e restiamo disponibili per miglioramenti evolutivi e manutenzione.
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- PROCESSO OTUR (CAROSELLO) END-->
+
+
+    <!-- SEZIONE "COSA È SEMPRE INCLUSO" -->
+    <section class="py-16 bg-slate-50/70 dark:bg-slate-950/40">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="text-xs uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-2">
+            Indipendentemente dal servizio scelto
+          </p>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+            Cosa trovi sempre nei nostri progetti.
+          </h2>
+          <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300">
+            Non vendiamo "template" ma processi strutturati. Ogni collaborazione include
+            una serie di elementi che rendono il progetto solido e davvero utilizzabile.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+            <h3 class="text-sm font-semibold mb-2 flex items-center gap-2">
+              <i data-lucide="notebook-pen" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+              Documentazione essenziale
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Brevi guide per aggiornare contenuti, gestire immagini e mantenere il sito
+              in ordine nel tempo.
+            </p>
+          </article>
+
+          <article class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+            <h3 class="text-sm font-semibold mb-2 flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+              Performance &amp; sicurezza
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Best practice di performance, sicurezza di base, backup e attenzione
+              all'accessibilità.
+            </p>
+          </article>
+
+          <article class="h-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-5
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         dark:bg-slate-900/80 dark:border-slate-800
+         transition-all duration-300">
+
+            <h3 class="text-sm font-semibold mb-2 flex items-center gap-2">
+              <i data-lucide="handshake" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+              Supporto al lancio
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Affiancamento nelle fasi di go-live, eventuali correzioni dell'ultimo minuto
+              e supporto nei primi giorni di utilizzo reale.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINI CASE STUDY / ESEMPI RAPIDI -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-2">
+              Alcuni esempi
+            </p>
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
+              Come applichiamo questi servizi ai progetti reali.
+            </h2>
+          </div>
+          <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300 max-w-xl">
+            Qui trovi una selezione molto sintetica di progetti. Nella pagina portfolio
+            potrai approfondire case study completi.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Progetto 1 -->
+          <article class="rounded-2xl bg-slate-900 text-slate-100 overflow-hidden
+                           dark:bg-slate-900 border border-slate-800">
+            <div class="h-32 bg-gradient-to-tr from-blue-500/70 to-slate-900/90"></div>
+            <div class="px-5 py-4 space-y-2">
+              <h3 class="text-sm font-semibold">Restyling sito aziendale B2B</h3>
+              <p class="text-[13px] text-slate-300">
+                Nuova architettura, design system e sviluppo a codice di un sito aziendale
+                con oltre 40 pagine, integrato con CRM.
+              </p>
+              <p class="text-[12px] text-slate-400">
+                Servizi: UX/UI Design · Sito web · Performance &amp; SEO
+              </p>
+            </div>
+          </article>
+
+          <!-- Progetto 2 -->
+          <article class="rounded-2xl bg-white/90 border border-slate-200 overflow-hidden
+                           dark:bg-slate-900/95 dark:border-slate-800">
+            <div class="h-32 bg-gradient-to-tr from-sky-400/80 to-slate-900/90"></div>
+            <div class="px-5 py-4 space-y-2">
+              <h3 class="text-sm font-semibold">E-commerce brand lifestyle</h3>
+              <p class="text-[13px] text-slate-600 dark:text-slate-300">
+                Progettazione dello shop, ottimizzazione delle schede prodotto e
+                checkout, integrazione con sistemi di marketing automation.
+              </p>
+              <p class="text-[12px] text-slate-500 dark:text-slate-400">
+                Servizi: UX · E-commerce · Analisi conversione
+              </p>
+            </div>
+          </article>
+
+          <!-- Progetto 3 -->
+          <article class="rounded-2xl bg-white/90 border border-slate-200 overflow-hidden
+                           dark:bg-slate-900/95 dark:border-slate-800">
+            <div class="h-32 bg-gradient-to-tr from-emerald-400/80 to-slate-900/90"></div>
+            <div class="px-5 py-4 space-y-2">
+              <h3 class="text-sm font-semibold">Ottimizzazione Core Web Vitals</h3>
+              <p class="text-[13px] text-slate-600 dark:text-slate-300">
+                Intervento mirato su un sito esistente con problemi di velocità. Miglioramento
+                significativo di LCP e INP con impatto positivo sulla SEO.
+              </p>
+              <p class="text-[12px] text-slate-500 dark:text-slate-400">
+                Servizi: Audit tecnico · Performance · SEO tecnica
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SPECIFICHE SUI SERVIZI -->
+    <section class="py-16 bg-slate-50/70 dark:bg-slate-950/40">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="text-xs uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-2">
+            Domande frequenti sui servizi
+          </p>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+            Come funziona lavorare insieme.
+          </h2>
+          <p class="text-sm md:text-[15px] text-slate-600 dark:text-slate-300">
+            Ogni progetto è diverso, ma ci sono alcune domande che riceviamo spesso
+            quando si parla di servizi, tempi e modalità.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 text-sm">
+   <article
+  class="rounded-2xl bg-white/90 border border-slate-200 overflow-hidden px-5 py-5
+         dark:bg-slate-900/95 dark:border-slate-800
+         shadow-[0_0_20px_rgba(37,99,235,0.06)]
+         hover:border-blue-500/60
+         hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]
+         transition-all duration-300">
+
+            <h3 class="font-semibold mb-1.5">Lavorate a pacchetti fissi o su preventivo?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-[13px] leading-relaxed">
+              Non abbiamo listini pre-confezionati. Partiamo sempre da una call conoscitiva
+              e da un breve questionario per capire obiettivi, contesto e vincoli. In base
+              a questi elementi definiamo un perimetro chiaro e un preventivo su misura.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/90 border border-slate-200 px-5 py-5
+                           dark:bg-slate-900/90 dark:border-slate-800">
+            <h3 class="font-semibold mb-1.5">Quali sono i tempi medi di un progetto?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-[13px] leading-relaxed">
+              Dipende da dimensione e complessità. In linea di massima: 4–6 settimane per
+              un sito one-page o landing, 8–12 settimane per siti aziendali strutturati o
+              e-commerce completi. Nella proposta troverai sempre una timeline realistica.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/90 border border-slate-200 px-5 py-5
+                           dark:bg-slate-900/90 dark:border-slate-800">
+            <h3 class="font-semibold mb-1.5">Possiamo partire solo dal design o solo dallo sviluppo?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-[13px] leading-relaxed">
+              Sì. Possiamo occuparci solo della parte di UX/UI, da consegnare al tuo team
+              di sviluppo, oppure entrare in gioco su un design già definito per curare
+              solo la parte tecnica e di performance.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/90 border border-slate-200 px-5 py-5
+                           dark:bg-slate-900/90 dark:border-slate-800">
+            <h3 class="font-semibold mb-1.5">Cosa succede dopo il lancio?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-[13px] leading-relaxed">
+              Non scompariamo. Possiamo prevedere un pacchetto di ore mensili per
+              manutenzione, piccoli miglioramenti o nuove pagine. In alternativa restiamo
+              disponibili su richiesta per interventi spot.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   <!-- FOOTER -->
+
+<footer class="bg-slate-50 dark:bg-slate-950">
   <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
 
     <!-- LOGO -->
@@ -679,24 +1105,19 @@
 
   </div>
 
-<!-- CTA FINALE -->
-<section class="py-20 text-center">
-  <h2 class="text-3xl font-semibold">Vuoi migliorare la tua presenza online?</h2>
-  <p class="mt-3 text-slate-500 dark:text-slate-400">
-    Parliamo del tuo progetto e troviamo la soluzione perfetta.
-  </p>
+  <!-- COPYRIGHT CENTERED -->
+  <div class="pb-6 text-center text-xs text-slate-500 dark:text-slate-500">
+    © 2025 MM&RDesign — Tutti i diritti riservati.
+  </div>
+</footer>
+<!-- FOOTER END-->
 
-  <a href="/index.html#contatti"
-     class="mt-6 inline-block px-8 py-3 rounded-xl 
-            bg-blue-600 hover:bg-blue-700 text-white font-medium
-            shadow-[0_0_20px_rgba(0,112,255,0.4)] transition">
-    Contattaci
-  </a>
-</section>
+  </main>
 
-<!-- JS -->
-<script type="module" src="/src/main.js"></script>
-<script>lucide.createIcons();</script>
-
+  <!-- JS -->
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
