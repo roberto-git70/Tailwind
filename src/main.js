@@ -21,23 +21,41 @@ function initDarkMode() {
   const html = document.documentElement;
   const savedTheme = localStorage.getItem("theme");
 
+  // Imposta il tema salvato o usa dark come default
   if (savedTheme === "light") {
     html.classList.remove("dark");
-  } else {
+  } else if (savedTheme === "dark") {
     html.classList.add("dark");
+  } else {
+    // Se non c'è tema salvato, usa la preferenza del sistema
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
   }
 
   if (darkToggle) {
-    darkToggle.textContent = html.classList.contains("dark") ? "🌙" : "☀️";
-    darkToggle.setAttribute("aria-label", html.classList.contains("dark") ? "Tema scuro attivo" : "Tema chiaro attivo");
+    // Funzione per aggiornare le icone Lucide
+    const updateIcons = () => {
+      if (window.lucide) {
+        setTimeout(() => {
+          window.lucide.createIcons();
+        }, 10);
+      }
+    };
+
+    // Aggiorna icone all'avvio
+    updateIcons();
 
     darkToggle.addEventListener("click", () => {
       html.classList.toggle("dark");
 
       const isDark = html.classList.contains("dark");
       localStorage.setItem("theme", isDark ? "dark" : "light");
-      darkToggle.textContent = isDark ? "🌙" : "☀️";
-      darkToggle.setAttribute("aria-label", isDark ? "Tema scuro attivo" : "Tema chiaro attivo");
+
+      // Aggiorna le icone Lucide dopo il toggle
+      updateIcons();
     });
   }
 }
