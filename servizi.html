@@ -100,7 +100,7 @@
       <!-- ICONS + SOCIAL (desktop only) -->
       <div class="hidden md:flex items-center gap-7">
         <button id="dark-toggle" aria-label="Toggle dark mode"
-                class="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300
+                class="flex items-center justify-center w-7 h-7 rounded-full transition-all duration-300
                        bg-gradient-to-br from-amber-400 to-orange-500 dark:from-indigo-500 dark:to-purple-600
                        hover:scale-110 hover:shadow-lg hover:shadow-amber-500/50 dark:hover:shadow-purple-500/50">
           <i data-lucide="sun" class="w-5 h-5 text-white hidden dark:hidden"></i>
@@ -161,12 +161,12 @@
     <!-- CONTENT -->
     <div class="relative z-10 mx-auto max-w-7xl px-6">
       <div class="max-w-3xl fade-in text-center mx-auto">
-        <div class="inline-block mb-4 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full text-sm font-medium text-blue-700 dark:text-blue-300">
-          ✨ I nostri servizi
-        </div>
+        <p class="text-sm uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400 mb-4">
+          I nostri servizi
+        </p>
 
-        <h1 class="text-5xl font-bold leading-tight md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-          Soluzioni digitali pensate per crescere
+        <h1 class="text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-slate-900 dark:text-white">
+          Soluzioni digitali <span class="text-blue-600 dark:text-blue-400">pensate per crescere</span>
         </h1>
 
         <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
@@ -174,10 +174,11 @@
         </p>
 
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <a href="#contatti" class="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3.5 text-sm font-medium text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+          <a href="#contatti" class="rounded-full bg-blue-600 px-7 py-3 text-sm font-medium text-white shadow-lg shadow-blue-500/30 hover:bg-blue-500 transition-all">
             Richiedi preventivo
           </a>
-          <a href="#servizi-grid" class="rounded-full border-2 border-slate-300 dark:border-slate-600 px-7 py-3 text-sm font-medium bg-white dark:bg-slate-800 hover:border-blue-500 dark:hover:border-blue-400 transition">
+          <a href="#servizi-grid" class="rounded-full border border-slate-400 px-6 py-3 text-sm font-medium text-slate-700 hover:border-blue-600 hover:text-blue-600
+                   dark:border-slate-600 dark:text-slate-100 dark:hover:border-blue-400 dark:hover:text-blue-300 transition">
             Esplora servizi
           </a>
         </div>
@@ -207,176 +208,180 @@
       <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
         <!-- CARD 1: UI/UX Design - BLU -->
-        <article class="fade-in group relative overflow-hidden p-8 rounded-3xl
-          bg-gradient-to-br from-blue-50 to-blue-100/50
-          dark:from-blue-900/20 dark:to-blue-800/10
-          border border-blue-200 dark:border-blue-800/50
-          hover:shadow-2xl hover:shadow-blue-500/20
-          transition-all duration-300 hover:-translate-y-2">
+        <article class="fade-in group relative overflow-hidden p-3 rounded-lg
+          bg-white/70 dark:bg-white/5
+          border border-white/10
+          backdrop-blur-xl
+          hover:shadow-[0_0_22px_5px_rgba(59,130,246,0.15)]
+          hover:border-blue-500/40
+          transition-all duration-300 hover:-translate-y-0.5">
 
           <div class="relative z-10">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-lg mb-6">
-              <i data-lucide="palette" class="w-8 h-8"></i>
+            <div class="w-8 h-8 rounded-md bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-sm mb-2.5">
+              <i data-lucide="palette" class="w-4 h-4"></i>
             </div>
 
-            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">UI / UX Design</h3>
+            <h3 class="text-sm font-bold mb-1 text-slate-900 dark:text-white">UI / UX Design</h3>
 
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+            <p class="text-xs text-slate-600 dark:text-slate-300 mb-2 leading-snug">
               Interfacce intuitive che guidano verso l'obiettivo.
             </p>
 
-            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 mb-6">
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <ul class="space-y-0.5 text-xs text-slate-600 dark:text-slate-300 mb-3">
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-blue-500"></div>
                 <span>Wireframe & prototipi</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-blue-500"></div>
                 <span>Design system</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-blue-500"></div>
                 <span>User research</span>
               </li>
             </ul>
 
-            <a href="#ui-ux" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 group-hover:gap-3 transition-all">
+            <a href="#ui-ux" class="inline-flex items-center gap-0.5 text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:gap-1 transition-all">
               Scopri di più
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
             </a>
           </div>
 
           <!-- Decorative circle -->
-          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
+          <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-blue-500/10 rounded-full blur-sm"></div>
         </article>
 
         <!-- CARD 2: Siti Web - VERDE -->
-        <article class="fade-in group relative overflow-hidden p-8 rounded-3xl
-          bg-gradient-to-br from-emerald-50 to-emerald-100/50
-          dark:from-emerald-900/20 dark:to-emerald-800/10
-          border border-emerald-200 dark:border-emerald-800/50
-          hover:shadow-2xl hover:shadow-emerald-500/20
-          transition-all duration-300 hover:-translate-y-2">
+        <article class="fade-in group relative overflow-hidden p-3 rounded-lg
+          bg-white/70 dark:bg-white/5
+          border border-white/10
+          backdrop-blur-xl
+          hover:shadow-[0_0_22px_5px_rgba(16,185,129,0.15)]
+          hover:border-emerald-500/40
+          transition-all duration-300 hover:-translate-y-0.5">
 
           <div class="relative z-10">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-white shadow-lg mb-6">
-              <i data-lucide="monitor-smartphone" class="w-8 h-8"></i>
+            <div class="w-8 h-8 rounded-md bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-white shadow-sm mb-2.5">
+              <i data-lucide="monitor-smartphone" class="w-4 h-4"></i>
             </div>
 
-            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Siti Web Pro</h3>
+            <h3 class="text-sm font-bold mb-1 text-slate-900 dark:text-white">Siti Web Pro</h3>
 
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+            <p class="text-xs text-slate-600 dark:text-slate-300 mb-2 leading-snug">
               Codice pulito, veloce e scalabile.
             </p>
 
-            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 mb-6">
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+            <ul class="space-y-0.5 text-xs text-slate-600 dark:text-slate-300 mb-3">
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-emerald-500"></div>
                 <span>100% responsive</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-emerald-500"></div>
                 <span>Performance top</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-emerald-500"></div>
                 <span>SEO ottimizzato</span>
               </li>
             </ul>
 
-            <a href="#siti-web" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 group-hover:gap-3 transition-all">
+            <a href="#siti-web" class="inline-flex items-center gap-0.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:gap-1 transition-all">
               Scopri di più
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
             </a>
           </div>
 
-          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl"></div>
+          <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-emerald-500/10 rounded-full blur-sm"></div>
         </article>
 
         <!-- CARD 3: E-commerce - ARANCIONE -->
-        <article class="fade-in group relative overflow-hidden p-8 rounded-3xl
-          bg-gradient-to-br from-orange-50 to-orange-100/50
-          dark:from-orange-900/20 dark:to-orange-800/10
-          border border-orange-200 dark:border-orange-800/50
-          hover:shadow-2xl hover:shadow-orange-500/20
-          transition-all duration-300 hover:-translate-y-2">
+        <article class="fade-in group relative overflow-hidden p-3 rounded-lg
+          bg-white/70 dark:bg-white/5
+          border border-white/10
+          backdrop-blur-xl
+          hover:shadow-[0_0_22px_5px_rgba(249,115,22,0.15)]
+          hover:border-orange-500/40
+          transition-all duration-300 hover:-translate-y-0.5">
 
           <div class="relative z-10">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white shadow-lg mb-6">
-              <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+            <div class="w-8 h-8 rounded-md bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white shadow-sm mb-2.5">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i>
             </div>
 
-            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">E-commerce</h3>
+            <h3 class="text-sm font-bold mb-1 text-slate-900 dark:text-white">E-commerce</h3>
 
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+            <p class="text-xs text-slate-600 dark:text-slate-300 mb-2 leading-snug">
               Shop progettati per convertire e vendere.
             </p>
 
-            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 mb-6">
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
+            <ul class="space-y-0.5 text-xs text-slate-600 dark:text-slate-300 mb-3">
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-orange-500"></div>
                 <span>Checkout ottimizzato</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-orange-500"></div>
                 <span>Gestione catalogo</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-orange-500"></div>
                 <span>Pagamenti sicuri</span>
               </li>
             </ul>
 
-            <a href="#ecommerce" class="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 dark:text-orange-400 group-hover:gap-3 transition-all">
+            <a href="#ecommerce" class="inline-flex items-center gap-0.5 text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:gap-1 transition-all">
               Scopri di più
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
             </a>
           </div>
 
-          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl"></div>
+          <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-orange-500/10 rounded-full blur-sm"></div>
         </article>
 
         <!-- CARD 4: Performance - VIOLA -->
-        <article class="fade-in group relative overflow-hidden p-8 rounded-3xl
-          bg-gradient-to-br from-purple-50 to-purple-100/50
-          dark:from-purple-900/20 dark:to-purple-800/10
-          border border-purple-200 dark:border-purple-800/50
-          hover:shadow-2xl hover:shadow-purple-500/20
-          transition-all duration-300 hover:-translate-y-2">
+        <article class="fade-in group relative overflow-hidden p-3 rounded-lg
+          bg-white/70 dark:bg-white/5
+          border border-white/10
+          backdrop-blur-xl
+          hover:shadow-[0_0_22px_5px_rgba(168,85,247,0.15)]
+          hover:border-purple-500/40
+          transition-all duration-300 hover:-translate-y-0.5">
 
           <div class="relative z-10">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white shadow-lg mb-6">
-              <i data-lucide="rocket" class="w-8 h-8"></i>
+            <div class="w-8 h-8 rounded-md bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white shadow-sm mb-2.5">
+              <i data-lucide="rocket" class="w-4 h-4"></i>
             </div>
 
-            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Performance & SEO</h3>
+            <h3 class="text-sm font-bold mb-1 text-slate-900 dark:text-white">Performance & SEO</h3>
 
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+            <p class="text-xs text-slate-600 dark:text-slate-300 mb-2 leading-snug">
               Velocità e visibilità ai massimi livelli.
             </p>
 
-            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 mb-6">
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
+            <ul class="space-y-0.5 text-xs text-slate-600 dark:text-slate-300 mb-3">
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-purple-500"></div>
                 <span>Audit tecnico</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-purple-500"></div>
                 <span>Ottimizzazione codice</span>
               </li>
-              <li class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
+              <li class="flex items-center gap-1.5">
+                <div class="w-0.5 h-0.5 rounded-full bg-purple-500"></div>
                 <span>SEO tecnica</span>
               </li>
             </ul>
 
-            <a href="#performance" class="inline-flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400 group-hover:gap-3 transition-all">
+            <a href="#performance" class="inline-flex items-center gap-0.5 text-xs font-semibold text-purple-600 dark:text-purple-400 group-hover:gap-1 transition-all">
               Scopri di più
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
             </a>
           </div>
 
-          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl"></div>
+          <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-purple-500/10 rounded-full blur-sm"></div>
         </article>
 
       </div>
@@ -394,49 +399,49 @@
   </section>
 
   <!-- DETTAGLI SERVIZI - Layout Alternato con Visual -->
-  <section class="relative py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950">
-    <div class="max-w-6xl mx-auto px-6 space-y-32">
+  <section class="relative py-16 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950">
+    <div class="max-w-6xl mx-auto px-6 space-y-24">
 
       <!-- UI/UX Design -->
-      <article id="ui-ux" class="grid md:grid-cols-2 gap-16 items-center">
+      <article id="ui-ux" class="grid md:grid-cols-2 gap-12 items-center">
         <div class="fade-in">
-          <div class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 rounded-full text-xs font-semibold text-blue-700 dark:text-blue-300 mb-4">
+          <div class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 rounded-full text-xs font-semibold text-blue-700 dark:text-blue-300 mb-3">
             01 · Design
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
             UI / UX Design
           </h2>
-          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-            Progettiamo esperienze che guidano l'utente verso l'obiettivo, senza frizioni.
+          <p class="text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+            Trasformiamo le tue idee in interfacce concrete attraverso ricerca utente, wireframe e prototipi interattivi. Ogni elemento è pensato per ridurre la frizione e aumentare il tasso di conversione. Dalla prima bozza al design system finale, costruiamo esperienze che i tuoi utenti ameranno usare.
           </p>
 
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">100%</div>
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-blue-500/30 dark:border-blue-500/40 rounded-lg">
+              <div class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-0.5">100%</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">User-centered</div>
             </div>
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">3-4</div>
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-blue-500/30 dark:border-blue-500/40 rounded-lg">
+              <div class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-0.5">3-4</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">Settimane</div>
             </div>
           </div>
 
-          <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
-              <span>Workshop e user personas</span>
+              <span>Workshop e user personale</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Wireframe e prototipi interattivi</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Design system scalabile</span>
             </li>
@@ -445,61 +450,64 @@
 
         <div class="fade-in">
           <div class="relative">
-            <!-- Visual Placeholder SVG -->
-            <div class="rounded-3xl bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 p-12 border border-blue-200 dark:border-blue-800/50">
-              <svg viewBox="0 0 200 200" class="w-full h-auto">
-                <rect x="20" y="20" width="160" height="100" rx="8" fill="currentColor" class="text-blue-200 dark:text-blue-800" opacity="0.3"/>
-                <rect x="30" y="30" width="60" height="40" rx="4" fill="currentColor" class="text-blue-400 dark:text-blue-600"/>
-                <rect x="100" y="30" width="60" height="40" rx="4" fill="currentColor" class="text-purple-400 dark:text-purple-600"/>
-                <circle cx="50" cy="150" r="15" fill="currentColor" class="text-blue-500"/>
-                <circle cx="100" cy="150" r="15" fill="currentColor" class="text-purple-500"/>
-                <circle cx="150" cy="150" r="15" fill="currentColor" class="text-pink-500"/>
-              </svg>
+            <!-- Icon Grid Pattern -->
+            <div class="rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-blue-200/50 dark:border-blue-800/30 p-12">
+              <div class="grid grid-cols-3 gap-8 items-center justify-items-center">
+                <i data-lucide="layout" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+                <i data-lucide="figma" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+                <i data-lucide="palette" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+                <i data-lucide="mouse-pointer-click" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+                <i data-lucide="palette" class="w-24 h-24 text-blue-600 dark:text-blue-400"></i>
+                <i data-lucide="users" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+                <i data-lucide="smartphone" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+                <i data-lucide="monitor-smartphone" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+                <i data-lucide="layers" class="w-8 h-8 text-blue-400 dark:text-blue-500 opacity-30"></i>
+              </div>
             </div>
           </div>
         </div>
       </article>
 
       <!-- Siti Web Aziendali -->
-      <article id="siti-web" class="grid md:grid-cols-2 gap-16 items-center">
+      <article id="siti-web" class="grid md:grid-cols-2 gap-12 items-center">
         <div class="fade-in md:order-2">
-          <div class="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-300 mb-4">
+          <div class="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-300 mb-3">
             02 · Sviluppo
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
             Siti Web Pro
           </h2>
-          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-            Codice pulito e performance elevate. Zero page builder.
+          <p class="text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+            Sviluppiamo siti web con codice scritto a mano, senza page builder. Ogni riga di codice è ottimizzata per garantire tempi di caricamento sotto il secondo e punteggi PageSpeed oltre 95. Responsive design mobile-first, integrazione con CRM e analytics, con possibilità di aggiungere un CMS leggero per gestire i contenuti in autonomia.
           </p>
 
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
-              <div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">&lt;1s</div>
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-emerald-500/30 dark:border-emerald-500/40 rounded-lg">
+              <div class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-0.5">&lt;1s</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">Load time</div>
             </div>
-            <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
-              <div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">95+</div>
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-emerald-500/30 dark:border-emerald-500/40 rounded-lg">
+              <div class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-0.5">95+</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">PageSpeed</div>
             </div>
           </div>
 
-          <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Responsive mobile-first</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Integrazioni CRM e analytics</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>CMS leggero opzionale</span>
             </li>
@@ -508,59 +516,64 @@
 
         <div class="fade-in md:order-1">
           <div class="relative">
-            <div class="rounded-3xl bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 p-12 border border-emerald-200 dark:border-emerald-800/50">
-              <svg viewBox="0 0 200 200" class="w-full h-auto">
-                <rect x="30" y="40" width="140" height="120" rx="8" fill="currentColor" class="text-emerald-200 dark:text-emerald-800" opacity="0.3"/>
-                <rect x="40" y="60" width="50" height="30" rx="4" fill="currentColor" class="text-emerald-500"/>
-                <rect x="100" y="60" width="50" height="30" rx="4" fill="currentColor" class="text-teal-500"/>
-                <line x1="40" y1="110" x2="150" y2="110" stroke="currentColor" class="text-emerald-400" stroke-width="3"/>
-                <line x1="40" y1="130" x2="120" y2="130" stroke="currentColor" class="text-emerald-400" stroke-width="3"/>
-              </svg>
+            <!-- Icon Grid Pattern -->
+            <div class="rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-emerald-200/50 dark:border-emerald-800/30 p-12">
+              <div class="grid grid-cols-3 gap-8 items-center justify-items-center">
+                <i data-lucide="code" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+                <i data-lucide="file-code" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+                <i data-lucide="smartphone" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+                <i data-lucide="gauge" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+                <i data-lucide="monitor-smartphone" class="w-24 h-24 text-emerald-600 dark:text-emerald-400"></i>
+                <i data-lucide="globe" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+                <i data-lucide="layers" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+                <i data-lucide="zap" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+                <i data-lucide="sparkles" class="w-8 h-8 text-emerald-400 dark:text-emerald-500 opacity-30"></i>
+              </div>
             </div>
           </div>
         </div>
       </article>
 
       <!-- E-commerce -->
-      <article id="ecommerce" class="grid md:grid-cols-2 gap-16 items-center">
+      <article id="ecommerce" class="grid md:grid-cols-2 gap-12 items-center">
         <div class="fade-in">
-          <div class="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900/30 rounded-full text-xs font-semibold text-orange-700 dark:text-orange-300 mb-4">
+          <div class="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900/30 rounded-full text-xs font-semibold text-orange-700 dark:text-orange-300 mb-3">
             03 · E-commerce
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
             Shop che Vendono
           </h2>
-          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-            Focus su conversione e UX d'acquisto ottimizzata.
+          <p class="text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+            Realizziamo shop online studiati per massimizzare le vendite. Checkout semplificato in pochi passaggi, filtri intelligenti per trovare i prodotti, gestione catalogo intuitiva e integrazione con sistemi di pagamento sicuri. Tracciamento completo delle conversioni per monitorare il ROAS e ottimizzare le campagne pubblicitarie.
           </p>
 
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-xl">
-              <div class="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-1">+35%</div>
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-orange-500/30 dark:border-orange-500/40 rounded-lg">
+              <div class="text-xl font-bold text-orange-600 dark:text-orange-400 mb-0.5">+35%</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">Conversioni</div>
             </div>
-            <div class="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-xl">
-              <div class="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-1">-20%</div>
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-orange-500/30 dark:border-orange-500/40 rounded-lg">
+              <div class="text-xl font-bold text-orange-600 dark:text-orange-400 mb-0.5">-20%</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">Abbandoni</div>
             </div>
           </div>
 
-          <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Checkout ottimizzato</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Filtri e navigazione smart</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Tracciamento ROAS</span>
             </li>
@@ -569,61 +582,68 @@
 
         <div class="fade-in">
           <div class="relative">
-            <div class="rounded-3xl bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 p-12 border border-orange-200 dark:border-orange-800/50">
-              <svg viewBox="0 0 200 200" class="w-full h-auto">
-                <circle cx="100" cy="80" r="40" fill="currentColor" class="text-orange-300 dark:text-orange-700" opacity="0.5"/>
-                <path d="M80 120 L100 100 L120 120 L110 150 L90 150 Z" fill="currentColor" class="text-orange-500"/>
-                <rect x="70" y="155" width="60" height="25" rx="4" fill="currentColor" class="text-red-500"/>
-              </svg>
+            <!-- Icon Grid Pattern -->
+            <div class="rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-orange-200/50 dark:border-orange-800/30 p-12">
+              <div class="grid grid-cols-3 gap-8 items-center justify-items-center">
+                <i data-lucide="package" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+                <i data-lucide="credit-card" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+                <i data-lucide="trending-up" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+                <i data-lucide="layout" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+                <i data-lucide="shopping-cart" class="w-24 h-24 text-orange-600 dark:text-orange-400"></i>
+                <i data-lucide="users" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+                <i data-lucide="smartphone" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+                <i data-lucide="globe" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+                <i data-lucide="sparkles" class="w-8 h-8 text-orange-400 dark:text-orange-500 opacity-30"></i>
+              </div>
             </div>
           </div>
         </div>
       </article>
 
       <!-- Performance & SEO -->
-      <article id="performance" class="grid md:grid-cols-2 gap-16 items-center">
+      <article id="performance" class="grid md:grid-cols-2 gap-12 items-center">
         <div class="fade-in md:order-2">
-          <div class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 rounded-full text-xs font-semibold text-purple-700 dark:text-purple-300 mb-4">
+          <div class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 rounded-full text-xs font-semibold text-purple-700 dark:text-purple-300 mb-3">
             04 · Ottimizzazione
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
             Performance & SEO
           </h2>
-          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-            Velocità massima e visibilità organica garantita.
+          <p class="text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+            Analizziamo ogni aspetto tecnico del tuo sito con audit approfonditi. Ottimizziamo asset, codice e infrastruttura per rispettare i Core Web Vitals di Google (LCP, CLS, INP). Implementiamo markup semantico, dati strutturati, sitemap XML e meta tag per migliorare il posizionamento organico e aumentare il traffico qualificato.
           </p>
 
-          <div class="grid grid-cols-3 gap-4 mb-8">
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl text-center">
-              <div class="text-xl font-bold text-purple-600 dark:text-purple-400 mb-1">&lt;2.5s</div>
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-purple-500/30 dark:border-purple-500/40 rounded-lg text-center">
+              <div class="text-lg font-bold text-purple-600 dark:text-purple-400 mb-0.5">&lt;2.5s</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">LCP</div>
             </div>
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl text-center">
-              <div class="text-xl font-bold text-purple-600 dark:text-purple-400 mb-1">&lt;0.1</div>
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-purple-500/30 dark:border-purple-500/40 rounded-lg text-center">
+              <div class="text-lg font-bold text-purple-600 dark:text-purple-400 mb-0.5">&lt;0.1</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">CLS</div>
             </div>
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl text-center">
-              <div class="text-xl font-bold text-purple-600 dark:text-purple-400 mb-1">&lt;200ms</div>
+            <div class="p-3 bg-white dark:bg-slate-900 border-2 border-purple-500/30 dark:border-purple-500/40 rounded-lg text-center">
+              <div class="text-lg font-bold text-purple-600 dark:text-purple-400 mb-0.5">&lt;200ms</div>
               <div class="text-xs text-slate-600 dark:text-slate-400">INP</div>
             </div>
           </div>
 
-          <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Audit tecnico completo</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Ottimizzazione asset</span>
             </li>
-            <li class="flex items-start gap-3">
-              <div class="mt-1 w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
-                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            <li class="flex items-start gap-2">
+              <div class="mt-0.5 w-4 h-4 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-2.5 h-2.5 text-white"></i>
               </div>
               <span>Setup SEO tecnica</span>
             </li>
@@ -632,15 +652,19 @@
 
         <div class="fade-in md:order-1">
           <div class="relative">
-            <div class="rounded-3xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 p-12 border border-purple-200 dark:border-purple-800/50">
-              <svg viewBox="0 0 200 200" class="w-full h-auto">
-                <path d="M40 150 Q100 50 160 150" stroke="currentColor" class="text-purple-500" stroke-width="4" fill="none"/>
-                <circle cx="40" cy="150" r="6" fill="currentColor" class="text-purple-600"/>
-                <circle cx="100" cy="50" r="8" fill="currentColor" class="text-pink-500"/>
-                <circle cx="160" cy="150" r="6" fill="currentColor" class="text-purple-600"/>
-                <path d="M 100 50 L 100 30" stroke="currentColor" class="text-pink-500" stroke-width="3"/>
-                <path d="M 95 35 L 100 25 L 105 35" fill="currentColor" class="text-pink-500"/>
-              </svg>
+            <!-- Icon Grid Pattern -->
+            <div class="rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-purple-200/50 dark:border-purple-800/30 p-12">
+              <div class="grid grid-cols-3 gap-8 items-center justify-items-center">
+                <i data-lucide="zap" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+                <i data-lucide="gauge" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+                <i data-lucide="trending-up" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+                <i data-lucide="minimize" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+                <i data-lucide="rocket" class="w-24 h-24 text-purple-600 dark:text-purple-400"></i>
+                <i data-lucide="globe" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+                <i data-lucide="sparkles" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+                <i data-lucide="file-code" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+                <i data-lucide="layers" class="w-8 h-8 text-purple-400 dark:text-purple-500 opacity-30"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -766,22 +790,15 @@
         Call gratuita di 30 minuti per capire come possiamo aiutarti a raggiungere i tuoi obiettivi digitali.
       </p>
 
-      <div class="flex flex-col items-center justify-center gap-4 mb-10">
+      <div class="flex justify-center">
         <a href="mailto:info@soluzioniwebdesign.com"
-            class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600
+            class="inline-flex items-center gap-2 rounded-full bg-blue-600
                   px-8 py-4 text-base font-semibold text-white
-                  shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/40 hover:scale-105
+                  shadow-lg shadow-blue-500/30 hover:bg-blue-500
                   transition-all">
           <i data-lucide="mail" class="w-5 h-5"></i>
           Prenota una call
         </a>
-      </div>
-
-      <div class="flex items-center justify-center text-sm text-slate-500 dark:text-slate-400">
-        <div class="flex items-center gap-2">
-          <i data-lucide="mail" class="w-4 h-4 text-blue-500 dark:text-blue-400"></i>
-          <a href="mailto:info@soluzioniwebdesign.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition">info@soluzioniwebdesign.com</a>
-        </div>
       </div>
 
     </div>
@@ -842,70 +859,23 @@
   </footer>
   <!-- FOOTER END-->
 
-  <!-- Script -->
-  <script type="module" src="/src/main.js"></script>
-  <script type="module">
-    import { createIcons, Moon, Sun, User, Facebook, Instagram, Linkedin, SquareX,
-             Palette, MonitorSmartphone, ShoppingCart, Rocket,
-             ChevronDown, Check, ArrowRight, Mail, Phone } from 'https://unpkg.com/lucide@latest/dist/esm/lucide.js';
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollToTop"
+          aria-label="Torna su"
+          class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50
+                 w-10 h-10 rounded-full
+                 bg-blue-600 dark:bg-blue-500
+                 text-white
+                 shadow-md shadow-blue-500/25
+                 opacity-0 pointer-events-none
+                 hover:bg-blue-500 dark:hover:bg-blue-400
+                 transition-all duration-300
+                 flex items-center justify-center
+                 group">
+    <i data-lucide="arrow-up" class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform"></i>
+  </button>
 
-    createIcons({
-      icons: {
-        Moon, Sun, User, Facebook, Instagram, Linkedin, SquareX,
-        Palette, MonitorSmartphone, ShoppingCart, Rocket,
-        ChevronDown, Check, ArrowRight, Mail, Phone
-      }
-    });
-
-    // Assegna createIcons a window per usarlo in main.js
-    window.lucide = { createIcons: () => createIcons({
-      icons: {
-        Moon, Sun, User, Facebook, Instagram, Linkedin, SquareX,
-        Palette, MonitorSmartphone, ShoppingCart, Rocket,
-        ChevronDown, Check, ArrowRight, Mail, Phone
-      }
-    }) };
-
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    mobileMenuBtn?.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Dropdown hover
-    const dropdowns = document.querySelectorAll('.has-dropdown');
-    dropdowns.forEach(item => {
-      const dropdown = item.querySelector('.dropdown');
-      item.addEventListener('mouseenter', () => dropdown?.classList.remove('hidden'));
-      item.addEventListener('mouseleave', () => dropdown?.classList.add('hidden'));
-    });
-
-    // Fade-in animation
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
-    });
-  </script>
-
-  <link rel="stylesheet" href="/src/style.css">
+  <!-- JS -->
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

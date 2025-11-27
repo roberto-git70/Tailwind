@@ -1,17 +1,55 @@
 
 import './style.css';
+import { createIcons, Moon, Sun, User, Facebook, Instagram, Linkedin, SquareX,
+         Palette, MonitorSmartphone, ShoppingCart, Rocket,
+         ChevronDown, Check, ArrowRight, ArrowUp, Mail, Phone, Zap,
+         Layout, Figma, MousePointerClick, Users, Layers, Smartphone,
+         Code, Gauge, Globe, Package, CreditCard, TrendingUp,
+         Sparkles, Minimize, FileCode } from 'https://unpkg.com/lucide@latest/dist/esm/lucide.js';
 
 /* =====================================================
    INIT APP
    ===================================================== */
 document.addEventListener('DOMContentLoaded', () => {
+  initLucideIcons();
   initDarkMode();
   initMobileMenu();
   initDropdownMenus();
   initFadeInOnScroll();
   initNavbarShadow();
   initFAQAccordion();
+  initScrollToTop();
 });
+
+/* =====================================================
+   LUCIDE ICONS
+   ===================================================== */
+function initLucideIcons() {
+  createIcons({
+    icons: {
+      Moon, Sun, User, Facebook, Instagram, Linkedin, SquareX,
+      Palette, MonitorSmartphone, ShoppingCart, Rocket,
+      ChevronDown, Check, ArrowRight, ArrowUp, Mail, Phone, Zap,
+      Layout, Figma, MousePointerClick, Users, Layers, Smartphone,
+      Code, Gauge, Globe, Package, CreditCard, TrendingUp,
+      Sparkles, Minimize, FileCode
+    }
+  });
+
+  // Esponi createIcons globalmente per compatibilità
+  window.lucide = {
+    createIcons: () => createIcons({
+      icons: {
+        Moon, Sun, User, Facebook, Instagram, Linkedin, SquareX,
+        Palette, MonitorSmartphone, ShoppingCart, Rocket,
+        ChevronDown, Check, ArrowRight, ArrowUp, Mail, Phone, Zap,
+        Layout, Figma, MousePointerClick, Users, Layers, Smartphone,
+        Code, Gauge, Globe, Package, CreditCard, TrendingUp,
+        Sparkles, Minimize, FileCode
+      }
+    })
+  };
+}
 
 /* =====================================================
    DARK MODE (tema scuro/chiaro)
@@ -150,6 +188,30 @@ function initNavbarShadow() {
         ticking = false;
       });
     }
+  });
+}
+
+/* =====================================================
+   SCROLL TO TOP BUTTON
+   ===================================================== */
+function initScrollToTop() {
+  const btn = document.getElementById('scrollToTop');
+  if (!btn) return;
+
+  // Mostra/nascondi in base allo scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+      btn.classList.add('opacity-100');
+    } else {
+      btn.classList.add('opacity-0', 'pointer-events-none');
+      btn.classList.remove('opacity-100');
+    }
+  });
+
+  // Click per tornare su
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 

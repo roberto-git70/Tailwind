@@ -87,7 +87,7 @@
 <div class="hidden md:flex items-center gap-7">
 
   <button id="dark-toggle" aria-label="Toggle dark mode"
-          class="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300
+          class="flex items-center justify-center w-7 h-7 rounded-full transition-all duration-300
                  bg-gradient-to-br from-amber-400 to-orange-500 dark:from-indigo-500 dark:to-purple-600
                  hover:scale-110 hover:shadow-lg hover:shadow-amber-500/50 dark:hover:shadow-purple-500/50">
     <i data-lucide="sun" class="w-5 h-5 text-white inline dark:hidden"></i>
@@ -218,15 +218,15 @@
 
     <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
-<!-- CARD 1 -->
-<article class="fade-in group p-6 rounded-2xl 
-  bg-white/70 dark:bg-white/5 
-  border border-white/10 
-  backdrop-blur-xl 
-  transition-all duration-300 
-  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
+<!-- CARD 1: UI/UX - BLU -->
+<article class="fade-in group p-6 rounded-2xl
+  bg-white/70 dark:bg-white/5
+  border border-white/10
+  backdrop-blur-xl
+  transition-all duration-300
+  hover:shadow-[0_0_22px_5px_rgba(59,130,246,0.15)]
   hover:border-blue-500/40">
-  
+
   <div class="text-blue-600 dark:text-blue-400">
     <i data-lucide="palette" class="w-7 h-7"></i>
   </div>
@@ -241,16 +241,16 @@
 
 </article>
 
-<!-- CARD 2 -->
-<article class="fade-in group p-6 rounded-2xl 
-  bg-white/70 dark:bg-white/5 
-  border border-white/10 
-  backdrop-blur-xl 
-  transition-all duration-300 
-  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
-  hover:border-blue-500/40">
+<!-- CARD 2: Siti Web - VERDE -->
+<article class="fade-in group p-6 rounded-2xl
+  bg-white/70 dark:bg-white/5
+  border border-white/10
+  backdrop-blur-xl
+  transition-all duration-300
+  hover:shadow-[0_0_22px_5px_rgba(16,185,129,0.15)]
+  hover:border-emerald-500/40">
 
-  <div class="text-blue-600 dark:text-blue-400">
+  <div class="text-emerald-600 dark:text-emerald-400">
     <i data-lucide="monitor-smartphone" class="w-7 h-7"></i>
   </div>
 
@@ -264,16 +264,16 @@
 
 </article>
 
-<!-- CARD 3 -->
-<article class="fade-in group p-6 rounded-2xl 
-  bg-white/70 dark:bg-white/5 
-  border border-white/10 
-  backdrop-blur-xl 
-  transition-all duration-300 
-  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
-  hover:border-blue-500/40">
+<!-- CARD 3: E-commerce - ARANCIONE -->
+<article class="fade-in group p-6 rounded-2xl
+  bg-white/70 dark:bg-white/5
+  border border-white/10
+  backdrop-blur-xl
+  transition-all duration-300
+  hover:shadow-[0_0_22px_5px_rgba(249,115,22,0.15)]
+  hover:border-orange-500/40">
 
-  <div class="text-blue-600 dark:text-blue-400">
+  <div class="text-orange-600 dark:text-orange-400">
     <i data-lucide="shopping-cart" class="w-7 h-7"></i>
   </div>
 
@@ -287,15 +287,15 @@
 
 </article>
 
-<!-- CARD 4 -->
-<article class="fade-in group p-6 rounded-2xl 
-  bg-white/70 dark:bg-white/5 
-  border border-white/10 
-  backdrop-blur-xl 
-  transition-all duration-300 
-  hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]
-  hover:border-blue-500/40">
-  <div class="text-blue-600 dark:text-blue-400">
+<!-- CARD 4: Performance - VIOLA -->
+<article class="fade-in group p-6 rounded-2xl
+  bg-white/70 dark:bg-white/5
+  border border-white/10
+  backdrop-blur-xl
+  transition-all duration-300
+  hover:shadow-[0_0_22px_5px_rgba(168,85,247,0.15)]
+  hover:border-purple-500/40">
+  <div class="text-purple-600 dark:text-purple-400">
     <i data-lucide="rocket" class="w-7 h-7"></i>
   </div>
 
@@ -308,6 +308,18 @@
   </ul>
 </article>
     </div>
+
+    <!-- CTA Servizi -->
+    <div class="mt-12 text-center fade-in">
+      <a href="servizi.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+        bg-white/70 dark:bg-white/5 border border-white/10 backdrop-blur-xl
+        text-slate-900 dark:text-white font-semibold text-sm
+        hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+        Scopri tutti i servizi
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+
   </div>
 </section>
 <!-- SIDE CARD END-->
@@ -515,47 +527,6 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
   </div>
 </section>
 
-<!-- CTA con doppio gradiente morbido -->
-<section 
-  class="relative py-32 overflow-hidden 
-         bg-gradient-to-b from-transparent via-slate-100 to-transparent dark:bg-gradient-to-b dark:from-transparent dark:via-slate-900/60 dark:to-transparent">
-
-  <!-- Layer centrale (la CTA vera e propria) -->
-  <div class="relative z-10 text-center max-w-3xl mx-auto px-6">
-
-<h2 class="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white leading-tight">
-  Trasforma la tua presenza digitale.<br />
-  Cominciamo insieme.
-</h2>
-
-<p class="mt-5 text-slate-600 dark:text-slate-400 text-lg">
-  Una call diretta per capire il tuo progetto e costruire qualcosa che funzioni davvero.
-</p>
-
-<a href="#contatti"
-    class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800 
-          px-10 py-4 text-base font-medium text-blue-600 dark:text-blue-400
-          shadow-xl shadow-blue-500/10 dark:shadow-blue-500/20
-          ring-1 ring-slate-200 dark:ring-slate-700
-          hover:shadow-blue-500/30 hover:-translate-y-0.5
-          transition-all">
-  Prenota una call gratuita
-</a>
-
-  </div>
-
-  <!-- Gradient top -->
-  <div class="absolute top-0 left-0 w-full h-40 
-              bg-gradient-to-b from-slate-100 to-transparent
-              dark:from-slate-950 dark:to-transparent"></div>
-
-  <!-- Gradient bottom -->
-  <div class="absolute bottom-0 left-0 w-full h-40 
-              bg-gradient-to-t from-slate-100 to-transparent
-              dark:from-slate-950 dark:to-transparent"></div>
-</section>
-
-<!-- CTA con doppio gradiente morbido END-->
 
 
 <!-- TESTIMONIAL -->
@@ -599,14 +570,14 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
       </div>
 
       <!-- Card 2 -->
-      <div class="group p-6 rounded-xl bg-white/70 dark:bg-white/5 border border-gray-200/60 dark:border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]">
-        
-        <div class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-2">
-          <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+      <div class="group p-6 rounded-xl bg-white/70 dark:bg-white/5 border border-gray-200/60 dark:border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_22px_5px_rgba(16,185,129,0.15)] hover:border-emerald-500/40">
+
+        <div class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 mb-2">
+          <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
           Cliente verificato
         </div>
 
-        <div class="flex text-blue-500 text-lg mb-3">★★★★☆</div>
+        <div class="flex text-emerald-500 text-lg mb-3">★★★★☆</div>
 
         <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
           Ottima comunicazione e grande attenzione ai dettagli. Performance eccellenti su desktop e mobile.
@@ -618,14 +589,14 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
       </div>
 
       <!-- Card 3 -->
-      <div class="group p-6 rounded-xl bg-white/70 dark:bg-white/5 border border-gray-200/60 dark:border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]">
+      <div class="group p-6 rounded-xl bg-white/70 dark:bg-white/5 border border-gray-200/60 dark:border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_22px_5px_rgba(249,115,22,0.15)] hover:border-orange-500/40">
 
-        <div class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-2">
-          <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+        <div class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 mb-2">
+          <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
           Cliente verificato
         </div>
 
-        <div class="flex text-blue-500 text-lg mb-3">★★★★★</div>
+        <div class="flex text-orange-500 text-lg mb-3">★★★★★</div>
 
         <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
           Sviluppo pulito, niente page builder e risultato finale stabile, veloce e sicuro. Assolutamente consigliato.
@@ -637,14 +608,14 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
       </div>
 
       <!-- Card 4 -->
-      <div class="group p-6 rounded-xl bg-white/70 dark:bg-white/5 border border-gray-200/60 dark:border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_22px_5px_rgba(0,112,255,0.2)]">
+      <div class="group p-6 rounded-xl bg-white/70 dark:bg-white/5 border border-gray-200/60 dark:border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_22px_5px_rgba(168,85,247,0.15)] hover:border-purple-500/40">
 
-        <div class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-2">
-          <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+        <div class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 mb-2">
+          <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
           Cliente verificato
         </div>
 
-        <div class="flex text-blue-500 text-lg mb-3">★★★★☆</div>
+        <div class="flex text-purple-500 text-lg mb-3">★★★★☆</div>
 
         <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
           Abbiamo ottenuto un design più chiaro e conversioni migliorate. Supporto continuo molto apprezzato.
@@ -664,56 +635,6 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
 
 
 
-<!-- FAQ -->
-
-<section class="py-24">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-semibold">Domande frequenti</h2>
-    <p class="text-neutral-500 dark:text-neutral-400 mt-3">
-      Risposte semplici e dirette alle domande più comuni.
-    </p>
-  </div>
-
-  <div class="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
-
-    <!-- FAQ CARD -->
-    <div class="rounded-2xl border border-white/10 bg-white/5 dark:bg-white/5 p-6 transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_-8px_rgba(0,112,255,0.35)]">
-      <h3 class="text-lg font-medium mb-3">Sviluppate tutto completamente a codice?</h3>
-      <p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">
-        Sì, realizziamo ogni progetto interamente a mano, senza template o page builder.
-        Questo garantisce prestazioni elevate e massima libertà di personalizzazione.
-      </p>
-    </div>
-
-    <!-- FAQ CARD -->
-    <div class="rounded-2xl border border-white/10 bg-white/5 dark:bg-white/5 p-6 transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_-8px_rgba(0,112,255,0.35)]">
-      <h3 class="text-lg font-medium mb-3">Quanto tempo richiede un progetto?</h3>
-      <p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">
-        Dipende dal tipo di progetto. In media un sito aziendale richiede 3–5 settimane,
-        mentre progetti più complessi possono richiedere più tempo.
-      </p>
-    </div>
-
-    <!-- FAQ CARD -->
-    <div class="rounded-2xl border border-white/10 bg-white/5 dark:bg-white/5 p-6 transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_-8px_rgba(0,112,255,0.35)]">
-      <h3 class="text-lg font-medium mb-3">I vostri siti sono ottimizzati per performance e SEO?</h3>
-      <p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">
-        Assolutamente sì. La struttura è pensata per caricamenti rapidi, ottimo punteggio Core Web Vitals e SEO tecnica integrata.
-      </p>
-    </div>
-
-    <!-- FAQ CARD -->
-    <div class="rounded-2xl border border-white/10 bg-white/5 dark:bg-white/5 p-6 transition-all hover:border-blue-500/40 hover:shadow-[0_0_25px_-8px_rgba(0,112,255,0.35)]">
-      <h3 class="text-lg font-medium mb-3">Gestite anche sicurezza e aggiornamenti?</h3>
-      <p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">
-        Sì, offriamo piani di manutenzione con aggiornamenti continui, monitoraggio e ottimizzazione costante.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FAQ END-->
 
 
 <!-- CTA FINALE – VERSIONE PREMIUM CON BADGE -->
@@ -744,7 +665,7 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
 
     <!-- CTA BUTTON -->
     <div class="mt-8">
-      <a href="#contatti"
+      <a href="mailto:info@soluzioniwebdesign.com"
        class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800 
               px-10 py-4 text-base font-medium text-blue-600 dark:text-blue-400
               shadow-xl shadow-blue-500/10 dark:shadow-blue-500/20
@@ -776,7 +697,6 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
       <a href="#services" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Servizi</a>
       <a href="#method" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Metodo</a>
       <a href="#case-study" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Case Study</a>
-      <a href="#faq" class="hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
       <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contatti</a>
     </nav>
 
@@ -814,13 +734,25 @@ class="mt-10 inline-block rounded-full bg-white dark:bg-slate-800
 </footer>
 <!-- FOOTER END-->
 
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollToTop"
+        aria-label="Torna su"
+        class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50
+               w-10 h-10 rounded-full
+               bg-blue-600 dark:bg-blue-500
+               text-white
+               shadow-md shadow-blue-500/25
+               opacity-0 pointer-events-none
+               hover:bg-blue-500 dark:hover:bg-blue-400
+               transition-all duration-300
+               flex items-center justify-center
+               group">
+  <i data-lucide="arrow-up" class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform"></i>
+</button>
 
 </main>
 <!-- JS -->
 <script type="module" src="/src/main.js"></script>
-<script>
-  lucide.createIcons();
-</script>
 
 </body>
 </html>
