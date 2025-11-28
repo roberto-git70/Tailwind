@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MM&R - Progetti & Competenze</title>
+
+  <!-- Favicon Base -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="24x24" href="/images/favicon/favicon-24.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon/favicon-64.png">
+
+  <!-- Icone grandi (browser moderni / manifest / PWA) -->
+  <link rel="icon" type="image/png" sizes="256x256" href="/images/favicon/favicon-256.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/favicon-512.png">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon-180.png">
+
+  <!-- Manifest PWA / Android -->
+  <link rel="manifest" href="/images/favicon/manifest.webmanifest">
+
+  <!-- Safari pinned tab -->
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#265DFF">
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="msapplication-TileColor" content="#ffffff">
+
+  <!-- Chrome / Android UI color -->
+  <meta name="theme-color" content="#265DFF">
+
+  <!-- ICO fallback per vecchi browser -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+
+  <!-- Icone -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav id="navbar"
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-md
+             bg-white/80 dark:bg-slate-900/70
+             border-b border-slate-200/60 dark:border-slate-800/70
+             transition-colors">
+
+    <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/images/MM&R_logo.webp" class="h-7 w-7 rounded-lg shadow" alt="Logo" />
+        <span class="text-[15px] font-semibold text-slate-700 dark:text-slate-200">
+          MM&R<span class="text-blue-600 dark:text-blue-400">Design</span>
+        </span>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <ul class="hidden md:flex items-center gap-8 text-[14px] font-medium">
+        <li>
+          <a href="/index.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/servizi.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Servizi
+          </a>
+        </li>
+        <li>
+          <a href="/progetti.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Progetti
+          </a>
+        </li>
+        <li>
+          <a href="/index.html#contatti" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Contatti
+          </a>
+        </li>
+      </ul>
+
+      <!-- ICONS + SOCIAL (desktop only) -->
+      <div class="hidden md:flex items-center gap-7">
+        <button id="dark-toggle" aria-label="Toggle dark mode"
+                class="flex items-center justify-center w-7 h-7 rounded-full transition-all duration-300
+                       bg-gradient-to-br from-amber-400 to-orange-500 dark:from-indigo-500 dark:to-purple-600
+                       hover:scale-110 hover:shadow-lg hover:shadow-amber-500/50 dark:hover:shadow-purple-500/50">
+          <i data-lucide="sun" class="w-5 h-5 text-white inline dark:hidden"></i>
+          <i data-lucide="moon" class="w-5 h-5 text-white hidden dark:inline"></i>
+        </button>
+
+        <a href="#" aria-label="Profilo"
+            class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+          <i data-lucide="user" class="w-5 h-5"></i>
+        </a>
+
+        <span class="w-px h-5 bg-slate-700/50"></span>
+
+        <a href="#" aria-label="Facebook" class="icon-glow text-slate-400 hover:text-blue-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="Instagram" class="icon-glow text-slate-400 hover:text-pink-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="LinkedIn" class="icon-glow text-slate-400 hover:text-blue-500 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="X" class="icon-glow text-slate-400 hover:text-slate-500 transition"><i data-lucide="square-x" class="w-5 h-5"></i></a>
+      </div>
+
+      <!-- HAMBURGER MOBILE -->
+      <button id="mobileMenuBtn"
+              class="md:hidden text-3xl text-slate-700 dark:text-slate-200 ml-auto">
+        ☰
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+      class="hidden md:hidden absolute top-full right-0 w-full z-50
+            bg-white/90 dark:bg-slate-900/70 backdrop-blur-md
+            border-t border-slate-200 dark:border-slate-800">
+      <ul class="px-6 py-4 text-right text-sm space-y-3">
+        <li><a href="/index.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Home</a></li>
+        <li><a href="/servizi.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Servizi</a></li>
+        <li><a href="/progetti.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Progetti</a></li>
+        <li><a href="/index.html#contatti" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative flex items-center pt-32 pb-24 bg-white dark:bg-slate-950">
+
+    <!-- BACKGROUND IMAGES -->
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="/images/img_hero_dark.webp" alt="Hero dark" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 dark:opacity-100 opacity-0">
+      <img src="/images/img_hero_light.webp" alt="Hero light" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 opacity-100 dark:opacity-0">
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-gradient-to-r
+                from-white/85 via-white/70 to-white/20
+                dark:from-slate-950 dark:via-slate-950/85 dark:to-slate-950/10"></div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+
+      <!-- BADGE -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 mb-5
+                  rounded-full border border-slate-300/60 dark:border-slate-700/40
+                  bg-slate-50/60 dark:bg-slate-800/40
+                  text-slate-700 dark:text-slate-300
+                  text-xs font-medium backdrop-blur fade-in">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+        Codice professionale, zero compromessi
+      </div>
+
+      <!-- TITOLO -->
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-tight fade-in">
+        Progetti realizzati con <span class="text-blue-600 dark:text-blue-400">codice puro</span>
+      </h1>
+
+      <!-- SOTTOTITOLO -->
+      <p class="mt-4 text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto fade-in">
+        Nessun page builder, nessuna limitazione. Solo HTML, CSS, JavaScript e framework professionali
+        per siti web veloci, scalabili e completamente personalizzabili.
+      </p>
+
+    </div>
+
+    <!-- Gradient soft transition Hero → Next section -->
+    <div class="pointer-events-none absolute bottom-0 left-0 w-full h-28
+         bg-gradient-to-b
+         from-transparent
+         to-slate-50
+         dark:to-slate-900">
+    </div>
+  </section>
+
+
+  <!-- SEZIONE: PERCHÉ CODICE PURO -->
+  <section class="py-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+          Codice puro vs Page Builder
+        </h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          Perché abbiamo scelto di non usare Wix, Elementor, Divi e altri page builder
+        </p>
+      </div>
+
+      <!-- GRIGLIA CONFRONTO -->
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- CON PAGE BUILDER (svantaggi) -->
+        <div class="fade-in p-6 rounded-xl bg-white dark:bg-slate-800 border-2 border-red-200 dark:border-red-900/40">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+              <i data-lucide="x" class="w-5 h-5 text-red-600 dark:text-red-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Con Page Builder</h3>
+          </div>
+
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Codice gonfio</strong> - File CSS/JS pesanti e ridondanti</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Performance scarse</strong> - Tempi di caricamento lenti (3-7s)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>SEO penalizzato</strong> - Google premia la velocità</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Limitazioni</strong> - Dipendenza da template e plugin</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Costi ricorrenti</strong> - Licenze e abbonamenti obbligatori, costi elevati</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Difficile manutenzione</strong> - Aggiornamenti che rischiano di rompere il sito</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CON CODICE PURO (vantaggi) -->
+        <div class="fade-in p-6 rounded-xl bg-white dark:bg-slate-800 border-2 border-green-200 dark:border-green-900/40">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+              <i data-lucide="check" class="w-5 h-5 text-green-600 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Con Codice Puro</h3>
+          </div>
+
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Performance ottimali</strong> - Caricamento &lt;1s</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>SEO superiore</strong> - Codice pulito e semantico</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Personalizzazione totale</strong> - Zero limitazioni di design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Scalabilità</strong> - Cresce con il tuo business</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Manutenzione semplice</strong> - Controllo completo del codice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i>
+              <span><strong>Indipendenza</strong> - Nessuna dipendenza da terze parti</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SEZIONE: STACK TECNOLOGICO -->
+  <section class="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 transition-colors duration-300">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+          Il nostro Stack Tecnologico
+        </h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">
+          Tecnologie moderne e affidabili per progetti professionali
+        </p>
+      </div>
+
+      <!-- GRIGLIA TECNOLOGIE -->
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- HTML5 / CSS3 -->
+        <div class="fade-in group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700
+                    hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/30 transition-all">
+
+          <!-- Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white shadow-sm">
+                <i data-lucide="code-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">HTML5 & CSS3</h3>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium">
+                  Core
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descrizione -->
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Base solida per ogni progetto. Markup semantico e CSS moderno per accessibilità, SEO e performance ottimali.
+          </p>
+
+          <!-- Highlights -->
+          <div class="space-y-2 mb-4">
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
+              <span><strong>Progetti:</strong> Utilizzato in tutti i nostri lavori</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="gauge" class="w-4 h-4 text-blue-500"></i>
+              <span><strong>Performance:</strong> 100/100 Lighthouse</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="trending-up" class="w-4 h-4 text-purple-500"></i>
+              <span><strong>Competenza:</strong> Expert level</span>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Semantic HTML</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">CSS Grid</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Flexbox</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Animations</span>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="fade-in group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700
+                    hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/30 transition-all">
+
+          <!-- Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-white shadow-sm">
+                <i data-lucide="braces" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">JavaScript</h3>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium">
+                  Core
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descrizione -->
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Interattività moderna senza framework pesanti. Codice pulito, performante e manutenibile.
+          </p>
+
+          <!-- Highlights -->
+          <div class="space-y-2 mb-4">
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
+              <span><strong>Progetti:</strong> 15+ applicazioni interattive</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="gauge" class="w-4 h-4 text-blue-500"></i>
+              <span><strong>Bundle size:</strong> &lt;50KB minimizzato</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="trending-up" class="w-4 h-4 text-purple-500"></i>
+              <span><strong>Competenza:</strong> Advanced</span>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">ES6+</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Async/Await</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">DOM API</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Fetch API</span>
+          </div>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div class="fade-in group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700
+                    hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/30 transition-all">
+
+          <!-- Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white shadow-sm">
+                <i data-lucide="wind" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Tailwind CSS</h3>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 font-medium">
+                  Framework
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descrizione -->
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Utility-first framework per design system rapidi, consistenti e completamente personalizzabili.
+          </p>
+
+          <!-- Highlights -->
+          <div class="space-y-2 mb-4">
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
+              <span><strong>Progetti:</strong> 10+ siti con Tailwind</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="gauge" class="w-4 h-4 text-blue-500"></i>
+              <span><strong>CSS finale:</strong> ~15KB (purged)</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="trending-up" class="w-4 h-4 text-purple-500"></i>
+              <span><strong>Velocità sviluppo:</strong> +40% più rapido</span>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">PostCSS</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">JIT Mode</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Custom Config</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Dark Mode</span>
+          </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="fade-in group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700
+                    hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/30 transition-all">
+
+          <!-- Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white shadow-sm">
+                <i data-lucide="grid-3x3" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bootstrap</h3>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 font-medium">
+                  Framework
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descrizione -->
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Framework CSS robusto e collaudato, ideale per progetti enterprise e prototipi rapidi.
+          </p>
+
+          <!-- Highlights -->
+          <div class="space-y-2 mb-4">
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
+              <span><strong>Progetti:</strong> 8+ applicazioni enterprise</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="gauge" class="w-4 h-4 text-blue-500"></i>
+              <span><strong>Componenti:</strong> 100% customizzati</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="trending-up" class="w-4 h-4 text-purple-500"></i>
+              <span><strong>Compatibilità:</strong> Cross-browser garantita</span>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Sass</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Grid System</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Utilities</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Theming</span>
+          </div>
+        </div>
+
+        <!-- WordPress -->
+        <div class="fade-in group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700
+                    hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/30 transition-all">
+
+          <!-- Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white shadow-sm">
+                <i data-lucide="layout-template" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">WordPress</h3>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 font-medium">
+                  CMS
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descrizione -->
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            CMS più utilizzato al mondo. Temi custom da zero, nessun page builder, massima flessibilità.
+          </p>
+
+          <!-- Highlights -->
+          <div class="space-y-2 mb-4">
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
+              <span><strong>Progetti:</strong> 12+ siti WordPress custom</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="gauge" class="w-4 h-4 text-blue-500"></i>
+              <span><strong>Page Speed:</strong> 90+ score medio</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="trending-up" class="w-4 h-4 text-purple-500"></i>
+              <span><strong>Approccio:</strong> Zero page builder</span>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Custom Themes</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">ACF</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">WooCommerce</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">REST API</span>
+          </div>
+        </div>
+
+        <!-- Git & GitHub -->
+        <div class="fade-in group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700
+                    hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/30 transition-all">
+
+          <!-- Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center text-white shadow-sm">
+                <i data-lucide="git-branch" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Git & GitHub</h3>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">
+                  Tools
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descrizione -->
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Version control professionale per codice sicuro, tracciabile e collaborazione in team.
+          </p>
+
+          <!-- Highlights -->
+          <div class="space-y-2 mb-4">
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
+              <span><strong>Progetti:</strong> Tutti versionati con Git</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="gauge" class="w-4 h-4 text-blue-500"></i>
+              <span><strong>Workflow:</strong> Feature branches + PR</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="trending-up" class="w-4 h-4 text-purple-500"></i>
+              <span><strong>Deploy:</strong> CI/CD automatizzato</span>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">GitHub Actions</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Pull Requests</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Branching</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">Code Review</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SEZIONE: CASE STUDY DATASET -->
+  <section id="case-study" class="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 transition-colors duration-300">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <div class="text-center mb-12 fade-in">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-5
+                    rounded-full border border-slate-300/60 dark:border-slate-700/40
+                    bg-slate-50/60 dark:bg-slate-800/40
+                    text-slate-700 dark:text-slate-300
+                    text-xs font-medium backdrop-blur">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+          Progetto completato
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+          Case Study: Dataset
+        </h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">
+          Piattaforma di gestione dati complessa per startup innovativa
+        </p>
+      </div>
+
+      <!-- CONTENUTO CASE STUDY -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- IMMAGINE/SCREENSHOT -->
+        <div class="fade-in relative group">
+          <!-- Link wrapper -->
+          <a href="https://www.dataset.info/" target="_blank" rel="noopener noreferrer" class="block">
+            <!-- Wrapper con ratio fisso -->
+            <div class="relative w-full max-w-4xl mx-auto">
+              <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl flex items-center justify-center bg-transparent">
+
+                <!-- DARK MODE IMAGE -->
+                <img
+                  src="/images/dataset.webp"
+                  alt="Dataset dark mockup"
+                  class="hidden dark:block w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <!-- LIGHT MODE IMAGE -->
+                <img
+                  src="/images/dataset_2.webp"
+                  alt="Dataset light mockup"
+                  class="block dark:hidden w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+
+              </div>
+
+              <!-- Badge Live -->
+              <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-500 hover:bg-green-600 text-white text-xs font-semibold transition-colors shadow-lg hover:shadow-xl z-10">
+                Live
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- DETTAGLI -->
+        <div class="fade-in space-y-6">
+
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Il Progetto</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Dataset è una piattaforma web complessa per la gestione e visualizzazione di grandi quantità di dati.
+              Il cliente necessitava di un'interfaccia moderna, veloce e intuitiva per utenti business.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-semibold text-slate-900 dark:text-white mb-3">Sfide tecniche</h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i>
+                <span>UI/UX complessa per visualizzazione dati real-time</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i>
+                <span>Performance ottimizzate per dataset di grandi dimensioni</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i>
+                <span>Responsive design per utilizzo mobile e tablet</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-semibold text-slate-900 dark:text-white mb-3">Tecnologie utilizzate</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                HTML5
+              </span>
+              <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                CSS3
+              </span>
+              <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                JavaScript
+              </span>
+              <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                Tailwind CSS
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 pt-4">
+            <div class="text-center p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">&lt;1s</div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Load Time</div>
+            </div>
+            <div class="text-center p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">100%</div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Responsive</div>
+            </div>
+            <div class="text-center p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">A+</div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Performance</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SEZIONE: COMPETENZE E SOLUZIONI -->
+  <section class="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 transition-colors duration-300">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <div class="text-center mb-12 fade-in">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-5
+                    rounded-full border border-slate-300/60 dark:border-slate-700/40
+                    bg-slate-50/60 dark:bg-slate-800/40
+                    text-slate-700 dark:text-slate-300
+                    text-xs font-medium backdrop-blur">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+          Le nostre competenze
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+          Cosa possiamo realizzare per te
+        </h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">
+          Sviluppiamo soluzioni professionali per ogni esigenza digitale
+        </p>
+      </div>
+
+      <!-- GRIGLIA PROGETTI CONCEPT -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- COMPETENZA 1: E-commerce -->
+        <article class="fade-in group">
+          <div class="relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800
+                      hover:shadow-xl hover:shadow-orange-500/10 transition-all">
+
+            <!-- Badge Competenza -->
+            <div class="absolute top-3 right-3 z-10 px-2 py-1 rounded-full bg-orange-500/90 backdrop-blur text-white text-xs font-semibold">
+              E-commerce
+            </div>
+
+            <!-- Immagine E-commerce -->
+            <div class="aspect-video overflow-hidden border-b border-slate-200 dark:border-slate-800">
+              <img
+                src="/images/card_ecommerce.webp"
+                alt="E-commerce solution mockup"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                Soluzioni E-commerce
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                Sviluppiamo shop online completi con carrello, filtri avanzati e checkout ottimizzato per massimizzare le conversioni
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  HTML/CSS
+                </span>
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  JavaScript
+                </span>
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  Bootstrap
+                </span>
+              </div>
+
+              <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Catalogo prodotti e gestione categorie</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Integrazione sistemi di pagamento</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Ottimizzazione conversioni e UX</span>
+                </li>
+              </ul>
+
+              <!-- CTA Link -->
+              <a href="/index.html#contatti"
+                 class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link">
+                <span>Richiedi un preventivo</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- COMPETENZA 2: Landing Page -->
+        <article class="fade-in group">
+          <div class="relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800
+                      hover:shadow-xl hover:shadow-green-500/10 transition-all">
+
+            <!-- Badge Competenza -->
+            <div class="absolute top-3 right-3 z-10 px-2 py-1 rounded-full bg-green-500/90 backdrop-blur text-white text-xs font-semibold">
+              Landing Page
+            </div>
+
+            <!-- Immagine Landing Page -->
+            <div class="aspect-video overflow-hidden border-b border-slate-200 dark:border-slate-800">
+              <img
+                src="/images/card_landin.webp"
+                alt="Landing page mockup"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                Landing Page ad Alta Conversione
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                Creiamo pagine di atterraggio ottimizzate per SaaS, servizi B2B e campagne marketing con CTA strategiche
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  HTML/CSS
+                </span>
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  Tailwind
+                </span>
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  JavaScript
+                </span>
+              </div>
+
+              <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Design focalizzato sulla conversione</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Struttura persuasiva e CTA ottimizzate</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Performance e velocità di caricamento</span>
+                </li>
+              </ul>
+
+              <!-- CTA Link -->
+              <a href="/index.html#contatti"
+                 class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link">
+                <span>Richiedi un preventivo</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- COMPETENZA 3: Portfolio & Siti Vetrina -->
+        <article class="fade-in group">
+          <div class="relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800
+                      hover:shadow-xl hover:shadow-purple-500/10 transition-all">
+
+            <!-- Badge Competenza -->
+            <div class="absolute top-3 right-3 z-10 px-2 py-1 rounded-full bg-purple-500/90 backdrop-blur text-white text-xs font-semibold">
+              Portfolio
+            </div>
+
+            <!-- Immagine Portfolio -->
+            <div class="aspect-video overflow-hidden border-b border-slate-200 dark:border-slate-800">
+              <img
+                src="/images/card_portfolio.webp"
+                alt="Portfolio website mockup"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                Portfolio e Siti Vetrina
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                Realizziamo portfolio professionali per creativi, fotografi, designer e professionisti con gallerie interattive
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  HTML/CSS
+                </span>
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  JavaScript
+                </span>
+                <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  Tailwind
+                </span>
+              </div>
+
+              <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Gallerie immagini e media</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Design personalizzato e unico</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3 h-3 text-blue-500"></i>
+                  <span>Esperienza utente fluida</span>
+                </li>
+              </ul>
+
+              <!-- CTA Link -->
+              <a href="/index.html#contatti"
+                 class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link">
+                <span>Richiedi un preventivo</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA FINALE - SUCCESS STORY STYLE -->
+  <section class="pt-40 pb-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 transition-colors duration-300">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <!-- Grid layout: Metriche a sinistra, CTA a destra -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- METRICHE / RISULTATI -->
+        <div class="fade-in space-y-6">
+
+          <div class="inline-flex items-center gap-2 px-3 py-1 mb-2
+                      rounded-full border border-green-300/60 dark:border-green-700/40
+                      bg-green-50/60 dark:bg-green-900/20
+                      text-green-700 dark:text-green-300
+                      text-xs font-medium backdrop-blur">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+            Risultati concreti
+          </div>
+
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight">
+            Vuoi risultati come questi?
+          </h2>
+
+          <p class="text-slate-600 dark:text-slate-400">
+            Il nostro approccio basato su codice puro ha permesso a Dataset di ottenere prestazioni eccellenti e un'esperienza utente superiore.
+          </p>
+
+          <!-- Grid Metriche -->
+          <div class="grid grid-cols-2 gap-4 pt-4">
+
+            <!-- Metrica 1 -->
+            <div class="p-5 rounded-xl bg-white/70 dark:bg-white/5 border border-slate-200 dark:border-slate-700 backdrop-blur">
+              <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">
+                &lt;1s
+              </div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">
+                Tempo di caricamento
+              </div>
+            </div>
+
+            <!-- Metrica 2 -->
+            <div class="p-5 rounded-xl bg-white/70 dark:bg-white/5 border border-slate-200 dark:border-slate-700 backdrop-blur">
+              <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">
+                100%
+              </div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">
+                Responsive Design
+              </div>
+            </div>
+
+            <!-- Metrica 3 -->
+            <div class="p-5 rounded-xl bg-white/70 dark:bg-white/5 border border-slate-200 dark:border-slate-700 backdrop-blur">
+              <div class="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1">
+                A+
+              </div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">
+                Performance Score
+              </div>
+            </div>
+
+            <!-- Metrica 4 -->
+            <div class="p-5 rounded-xl bg-white/70 dark:bg-white/5 border border-slate-200 dark:border-slate-700 backdrop-blur">
+              <div class="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-1">
+                0
+              </div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">
+                Page Builder
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CALL TO ACTION -->
+        <div class="fade-in">
+          <div class="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30
+                      border border-blue-200 dark:border-blue-800/40 shadow-xl">
+
+            <div class="text-center space-y-6">
+
+              <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/40 mb-2">
+                <i data-lucide="rocket" class="w-8 h-8 text-blue-600 dark:text-blue-400"></i>
+              </div>
+
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                Il tuo prossimo progetto inizia qui
+              </h3>
+
+              <p class="text-slate-600 dark:text-slate-300">
+                Sviluppiamo soluzioni web professionali con codice puro, performance ottimizzate e design su misura.
+              </p>
+
+              <!-- Checklist benefici -->
+              <ul class="text-left space-y-3 text-sm text-slate-700 dark:text-slate-300">
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0"></i>
+                  <span>Consulenza gratuita di 30 minuti</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0"></i>
+                  <span>Preventivo dettagliato in 48 ore</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0"></i>
+                  <span>Zero page builder, massima qualità</span>
+                </li>
+              </ul>
+
+              <!-- Bottone CTA -->
+              <div class="pt-4">
+                <a href="/index.html#contatti"
+                   class="group/btn relative inline-flex items-center justify-center gap-2 w-full
+                          rounded-full bg-gradient-to-r from-blue-600 to-blue-700
+                          px-8 py-4 text-base font-semibold text-white
+                          shadow-lg shadow-blue-500/30
+                          hover:shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1
+                          transition-all duration-300
+                          overflow-hidden">
+                  <!-- Overlay animato -->
+                  <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+                  <!-- Glow effect -->
+                  <span class="absolute inset-0 rounded-full blur-xl bg-blue-400/0 group-hover/btn:bg-blue-400/30 transition-all duration-300"></span>
+                  <!-- Contenuto -->
+                  <i data-lucide="calendar" class="w-5 h-5 relative z-10"></i>
+                  <span class="relative z-10">Prenota la tua consulenza</span>
+                </a>
+              </div>
+
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                📧 Risposta garantita entro 24 ore
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <!-- LOGO -->
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/images/MM&R_logo.webp" class="h-7 w-7 rounded-lg shadow" alt="Logo" />
+        <span class="text-[15px] font-semibold text-slate-700 dark:text-slate-200">
+          MM&R<span class="text-blue-600 dark:text-blue-400">Design</span>
+        </span>
+      </a>
+
+      <!-- NAV LINKS -->
+      <nav class="flex gap-8 text-sm text-slate-600 dark:text-slate-400">
+        <a href="/servizi.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Servizi</a>
+        <a href="/progetti.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Progetti</a>
+        <a href="/index.html#contatti" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contatti</a>
+      </nav>
+
+      <!-- SOCIAL ICONS -->
+      <div class="flex items-center gap-5">
+        <a href="#" aria-label="Facebook"
+           class="text-slate-400 hover:text-blue-500 transition transform hover:scale-110">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram"
+           class="text-slate-400 hover:text-pink-400 transition transform hover:scale-110">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+
+        <a href="#" aria-label="LinkedIn"
+           class="text-slate-400 hover:text-blue-600 transition transform hover:scale-110">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+
+        <a href="#" aria-label="X"
+           class="text-slate-400 hover:text-slate-600 transition transform hover:scale-110">
+          <i data-lucide="square-x" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-slate-500 dark:text-slate-500">
+        © 2025 MM&RDesign. Tutti i diritti riservati.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollToTop"
+          aria-label="Torna su"
+          class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50
+                 w-10 h-10 rounded-full
+                 bg-blue-600 dark:bg-blue-500
+                 text-white
+                 shadow-md shadow-blue-500/25
+                 opacity-0 pointer-events-none
+                 hover:bg-blue-500 dark:hover:bg-blue-400
+                 transition-all duration-300
+                 flex items-center justify-center
+                 group">
+    <i data-lucide="arrow-up" class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform"></i>
+  </button>
+
+
+  <!-- JAVASCRIPT -->
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>

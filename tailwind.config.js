@@ -4,6 +4,7 @@ export default {
   content: [
   './index.html',
   './servizi.html',
+  './progetti.html',
   './src/**/*.{js,ts,jsx,tsx}',
 ],
   theme: { extend: {} },

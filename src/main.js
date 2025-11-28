@@ -5,7 +5,8 @@ import { createIcons, Moon, Sun, User, Facebook, Instagram, Linkedin, SquareX,
          ChevronDown, Check, ArrowRight, ArrowUp, Mail, Phone, Zap,
          Layout, Figma, MousePointerClick, Users, Layers, Smartphone,
          Code, Gauge, Globe, Package, CreditCard, TrendingUp,
-         Sparkles, Minimize, FileCode } from 'https://unpkg.com/lucide@latest/dist/esm/lucide.js';
+         Sparkles, Minimize, FileCode, Code2, Braces, Wind, Grid3x3,
+         LayoutTemplate, GitBranch, CheckCircle2, X, AlertCircle, CheckCircle } from 'https://unpkg.com/lucide@latest/dist/esm/lucide.js';
 
 /* =====================================================
    INIT APP
@@ -32,7 +33,8 @@ function initLucideIcons() {
       ChevronDown, Check, ArrowRight, ArrowUp, Mail, Phone, Zap,
       Layout, Figma, MousePointerClick, Users, Layers, Smartphone,
       Code, Gauge, Globe, Package, CreditCard, TrendingUp,
-      Sparkles, Minimize, FileCode
+      Sparkles, Minimize, FileCode, Code2, Braces, Wind, Grid3x3,
+      LayoutTemplate, GitBranch, CheckCircle2, X, AlertCircle, CheckCircle
     }
   });
 
@@ -45,7 +47,8 @@ function initLucideIcons() {
         ChevronDown, Check, ArrowRight, ArrowUp, Mail, Phone, Zap,
         Layout, Figma, MousePointerClick, Users, Layers, Smartphone,
         Code, Gauge, Globe, Package, CreditCard, TrendingUp,
-        Sparkles, Minimize, FileCode
+        Sparkles, Minimize, FileCode, Code2, Braces, Wind, Grid3x3,
+        LayoutTemplate, GitBranch, CheckCircle2, X, AlertCircle, CheckCircle
       }
     })
   };
