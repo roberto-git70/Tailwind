@@ -5,6 +5,7 @@ export default {
   './index.html',
   './servizi.html',
   './progetti.html',
+  './contatti.html',
   './src/**/*.{js,ts,jsx,tsx}',
 ],
   theme: { extend: {} },

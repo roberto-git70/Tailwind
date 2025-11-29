@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MM&R - Contatti</title>
+
+  <!-- Favicon Base -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="24x24" href="/images/favicon/favicon-24.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon/favicon-64.png">
+
+  <!-- Icone grandi (browser moderni / manifest / PWA) -->
+  <link rel="icon" type="image/png" sizes="256x256" href="/images/favicon/favicon-256.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/favicon-512.png">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon-180.png">
+
+  <!-- Manifest PWA / Android -->
+  <link rel="manifest" href="/images/favicon/manifest.webmanifest">
+
+  <!-- Safari pinned tab -->
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#265DFF">
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="msapplication-TileColor" content="#ffffff">
+
+  <!-- Chrome / Android UI color -->
+  <meta name="theme-color" content="#265DFF">
+
+  <!-- ICO fallback per vecchi browser -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+
+  <!-- Icone -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfF4zYeAAAAAFIENRpyuSsUn2iRZuDP7sTv8u24"></script>
+</head>
+
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav id="navbar"
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-md
+             bg-white/80 dark:bg-slate-900/70
+             border-b border-slate-200/60 dark:border-slate-800/70
+             transition-colors">
+
+    <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/images/MM&R_logo.webp" class="h-7 w-7 rounded-lg shadow" alt="Logo" />
+        <span class="text-[15px] font-semibold text-slate-700 dark:text-slate-200">
+          MM&R<span class="text-blue-600 dark:text-blue-400">Design</span>
+        </span>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <ul class="hidden md:flex items-center gap-8 text-[14px] font-medium">
+        <li>
+          <a href="/index.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/servizi.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Servizi
+          </a>
+        </li>
+        <li>
+          <a href="/progetti.html" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition">
+            Progetti
+          </a>
+        </li>
+        <li>
+          <a href="/contatti.html" class="text-blue-600 dark:text-blue-400 font-semibold transition">
+            Contatti
+          </a>
+        </li>
+      </ul>
+
+      <!-- ICONS + SOCIAL (desktop only) -->
+      <div class="hidden md:flex items-center gap-7">
+        <button id="dark-toggle" aria-label="Toggle dark mode"
+                class="flex items-center justify-center w-7 h-7 rounded-full transition-all duration-300
+                       bg-gradient-to-br from-amber-400 to-orange-500 dark:from-indigo-500 dark:to-purple-600
+                       hover:scale-110 hover:shadow-lg hover:shadow-amber-500/50 dark:hover:shadow-purple-500/50">
+          <i data-lucide="sun" class="w-5 h-5 text-white inline dark:hidden"></i>
+          <i data-lucide="moon" class="w-5 h-5 text-white hidden dark:inline"></i>
+        </button>
+
+        <a href="#" aria-label="Profilo"
+            class="icon-btn text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+          <i data-lucide="user" class="w-5 h-5"></i>
+        </a>
+
+        <span class="w-px h-5 bg-slate-700/50"></span>
+
+        <a href="#" aria-label="Facebook" class="icon-glow text-slate-400 hover:text-blue-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="Instagram" class="icon-glow text-slate-400 hover:text-pink-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="LinkedIn" class="icon-glow text-slate-400 hover:text-blue-500 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="X" class="icon-glow text-slate-400 hover:text-slate-500 transition"><i data-lucide="square-x" class="w-5 h-5"></i></a>
+      </div>
+
+      <!-- HAMBURGER MOBILE -->
+      <button id="mobileMenuBtn"
+              class="md:hidden text-3xl text-slate-700 dark:text-slate-200 ml-auto">
+        ☰
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+      class="hidden md:hidden absolute top-full right-0 w-full z-50
+            bg-white/90 dark:bg-slate-900/70 backdrop-blur-md
+            border-t border-slate-200 dark:border-slate-800">
+      <ul class="px-6 py-4 text-right text-sm space-y-3">
+        <li><a href="/index.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Home</a></li>
+        <li><a href="/servizi.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Servizi</a></li>
+        <li><a href="/progetti.html" class="block px-2 py-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">Progetti</a></li>
+        <li><a href="/contatti.html" class="block px-2 py-2 rounded-lg bg-slate-200/60 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-semibold">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION con Glassmorphism -->
+  <section id="hero" class="relative flex items-center pt-32 pb-24 min-h-[500px] overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+
+    <!-- BACKGROUND GLASSMORPHISM BLOBS -->
+    <div class="absolute inset-0 overflow-hidden">
+
+      <!-- Blob 1 - Grande blu in alto a sinistra -->
+      <div class="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full
+                  bg-gradient-to-br from-blue-400/70 to-blue-600/50
+                  dark:from-blue-500/40 dark:to-blue-700/30
+                  blur-2xl animate-blob"></div>
+
+      <!-- Blob 2 - Grande azzurro centrale -->
+      <div class="absolute top-20 left-1/3 w-[450px] h-[450px] rounded-full
+                  bg-gradient-to-br from-cyan-400/60 to-blue-500/45
+                  dark:from-cyan-500/35 dark:to-blue-600/25
+                  blur-2xl animate-blob animation-delay-2000"></div>
+
+      <!-- Blob 3 - Grande viola in alto a destra -->
+      <div class="absolute -top-20 right-10 w-[420px] h-[420px] rounded-full
+                  bg-gradient-to-br from-indigo-400/65 to-purple-500/50
+                  dark:from-indigo-500/40 dark:to-purple-600/30
+                  blur-2xl animate-blob animation-delay-4000"></div>
+
+      <!-- Blob 4 - Medio blu in basso -->
+      <div class="absolute bottom-0 left-1/2 w-[380px] h-[380px] rounded-full
+                  bg-gradient-to-br from-blue-300/60 to-indigo-400/45
+                  dark:from-blue-400/35 dark:to-indigo-500/25
+                  blur-2xl animate-blob animation-delay-3000"></div>
+
+      <!-- Blob 5 - Piccolo rosa destra -->
+      <div class="absolute top-1/2 right-32 w-[280px] h-[280px] rounded-full
+                  bg-gradient-to-br from-pink-400/50 to-purple-400/40
+                  dark:from-pink-500/30 dark:to-purple-500/20
+                  blur-xl animate-blob animation-delay-5000"></div>
+
+      <!-- Forme geometriche decorative -->
+      <div class="absolute top-40 left-20 w-32 h-32 border-2 border-blue-400/20 dark:border-blue-400/10 rounded-full animate-blob"></div>
+      <div class="absolute bottom-40 right-40 w-24 h-24 border-2 border-purple-400/20 dark:border-purple-400/10 rotate-45 animate-blob animation-delay-2000"></div>
+
+      <!-- Overlay leggero per profondità -->
+      <div class="absolute inset-0 bg-white/20 dark:bg-slate-950/30 backdrop-blur-[1px]"></div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+
+      <!-- BADGE -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 mb-6
+                  rounded-full border border-white/40 dark:border-white/10
+                  bg-white/60 dark:bg-slate-800/50
+                  text-slate-700 dark:text-slate-300
+                  text-xs font-medium backdrop-blur-xl shadow-lg
+                  fade-in">
+        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        Siamo qui per te
+      </div>
+
+      <!-- Titolo -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-slate-900 dark:text-white fade-in">
+        Parliamo del tuo<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+          prossimo progetto
+        </span>
+      </h1>
+
+      <!-- Sottotitolo -->
+      <p class="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto fade-in">
+        Raccontaci la tua idea e trasformiamola insieme in un prodotto digitale di successo.
+      </p>
+
+      <!-- Stats mini -->
+      <div class="mt-10 flex flex-wrap justify-center gap-8 fade-in">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">24h</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400">Risposta garantita</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">100%</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400">Consulenza gratuita</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400">Progetti completati</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Gradient soft transition -->
+    <div class="pointer-events-none absolute bottom-0 left-0 w-full h-28
+         bg-gradient-to-b from-transparent to-slate-50 dark:to-slate-950"></div>
+
+  </section>
+
+  <!-- SEZIONE FORM + INFO CONTATTI -->
+  <section class="py-20 bg-slate-50 dark:bg-slate-950">
+    <div class="mx-auto max-w-7xl px-6">
+
+      <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+        <!-- INFO CONTATTI - Sidebar sinistra -->
+        <div class="lg:col-span-2 space-y-8">
+
+          <div class="fade-in">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+              Informazioni di contatto
+            </h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Scegli il canale che preferisci per metterti in contatto con noi
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="fade-in flex items-start gap-4 p-5 rounded-xl
+                      bg-white/70 dark:bg-white/5
+                      border border-white/10 backdrop-blur-xl
+                      hover:shadow-lg transition-all duration-300">
+            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30
+                        flex items-center justify-center text-blue-600 dark:text-blue-400">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900 dark:text-white mb-1">Email</h3>
+              <a href="mailto:info@soluzioniwebdesign.com" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                info@soluzioniwebdesign.com
+              </a>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Risposta entro 24h
+              </p>
+            </div>
+          </div>
+
+          <!-- Indirizzo -->
+          <div class="fade-in flex items-start gap-4 p-5 rounded-xl
+                      bg-white/70 dark:bg-white/5
+                      border border-white/10 backdrop-blur-xl
+                      hover:shadow-lg transition-all duration-300">
+            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30
+                        flex items-center justify-center text-purple-600 dark:text-purple-400">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900 dark:text-white mb-1">Sede</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Pistoia, Toscana<br/>
+                Italia
+              </p>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="fade-in p-5 rounded-xl
+                      bg-white/70 dark:bg-white/5
+                      border border-white/10 backdrop-blur-xl">
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-4">Seguici sui social</h3>
+            <div class="flex gap-3">
+              <a href="https://www.facebook.com/profile.php?id=61579703523872" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800
+                               flex items-center justify-center text-slate-600 dark:text-slate-400
+                               hover:bg-blue-100 dark:hover:bg-blue-900/30
+                               hover:text-blue-600 dark:hover:text-blue-400
+                               transition-all duration-300">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="https://www.instagram.com/mmr_webdesign/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800
+                               flex items-center justify-center text-slate-600 dark:text-slate-400
+                               hover:bg-pink-100 dark:hover:bg-pink-900/30
+                               hover:text-pink-600 dark:hover:text-pink-400
+                               transition-all duration-300">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/roberto-r-095530380/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800
+                               flex items-center justify-center text-slate-600 dark:text-slate-400
+                               hover:bg-blue-100 dark:hover:bg-blue-900/30
+                               hover:text-blue-600 dark:hover:text-blue-400
+                               transition-all duration-300">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+              <a href="https://x.com/MMRWebDesign" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800
+                               flex items-center justify-center text-slate-600 dark:text-slate-400
+                               hover:bg-slate-200 dark:hover:bg-slate-700
+                               hover:text-slate-800 dark:hover:text-slate-200
+                               transition-all duration-300">
+                <i data-lucide="square-x" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FORM CONTATTI - Parte destra più grande -->
+        <div class="lg:col-span-3 fade-in">
+          <div class="p-8 md:p-10 rounded-2xl
+                      bg-white/70 dark:bg-white/5
+                      border border-white/10 backdrop-blur-xl
+                      shadow-2xl shadow-slate-900/5 dark:shadow-black/20">
+
+            <div class="mb-8">
+              <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+                Inviaci un messaggio
+              </h2>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Compila il form e ti risponderemo il prima possibile
+              </p>
+            </div>
+
+            <!-- Messaggi di feedback -->
+            <div id="formMessage" class="hidden mb-6 p-4 rounded-lg"></div>
+
+            <form id="contactForm" action="#" method="POST" class="space-y-6">
+
+              <!-- Nome e Cognome -->
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label for="nome" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                    Nome *
+                  </label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    class="w-full px-4 py-3 rounded-lg
+                           bg-white dark:bg-slate-900
+                           border border-slate-300 dark:border-slate-700
+                           text-slate-900 dark:text-white
+                           placeholder-slate-400 dark:placeholder-slate-500
+                           focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                           transition-all"
+                    placeholder="Mario">
+                </div>
+
+                <div>
+                  <label for="cognome" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                    Cognome *
+                  </label>
+                  <input
+                    type="text"
+                    id="cognome"
+                    name="cognome"
+                    required
+                    class="w-full px-4 py-3 rounded-lg
+                           bg-white dark:bg-slate-900
+                           border border-slate-300 dark:border-slate-700
+                           text-slate-900 dark:text-white
+                           placeholder-slate-400 dark:placeholder-slate-500
+                           focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                           transition-all"
+                    placeholder="Rossi">
+                </div>
+              </div>
+
+              <!-- Email e Telefono -->
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg
+                           bg-white dark:bg-slate-900
+                           border border-slate-300 dark:border-slate-700
+                           text-slate-900 dark:text-white
+                           placeholder-slate-400 dark:placeholder-slate-500
+                           focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                           transition-all"
+                    placeholder="mario.rossi@email.com">
+                </div>
+
+                <div>
+                  <label for="telefono" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                    Telefono
+                  </label>
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    class="w-full px-4 py-3 rounded-lg
+                           bg-white dark:bg-slate-900
+                           border border-slate-300 dark:border-slate-700
+                           text-slate-900 dark:text-white
+                           placeholder-slate-400 dark:placeholder-slate-500
+                           focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                           transition-all"
+                    placeholder="+39 340 123 4567">
+                </div>
+              </div>
+
+              <!-- Servizio di interesse -->
+              <div>
+                <label for="servizio" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                  Servizio di interesse
+                </label>
+                <select
+                  id="servizio"
+                  name="servizio"
+                  class="w-full px-4 py-3 rounded-lg
+                         bg-white dark:bg-slate-900
+                         border border-slate-300 dark:border-slate-700
+                         text-slate-900 dark:text-white
+                         focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                         transition-all">
+                  <option value="">Seleziona un servizio...</option>
+                  <option value="professionisti">Sito per Professionisti</option>
+                  <option value="sito-web">Sito Web Aziendale</option>
+                  <option value="ecommerce">E-commerce</option>
+                  <option value="performance">Performance & SEO</option>
+                  <option value="consulenza">Consulenza</option>
+                  <option value="altro">Altro</option>
+                </select>
+              </div>
+
+              <!-- Messaggio -->
+              <div>
+                <label for="messaggio" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                  Messaggio *
+                </label>
+                <textarea
+                  id="messaggio"
+                  name="messaggio"
+                  rows="5"
+                  required
+                  class="w-full px-4 py-3 rounded-lg
+                         bg-white dark:bg-slate-900
+                         border border-slate-300 dark:border-slate-700
+                         text-slate-900 dark:text-white
+                         placeholder-slate-400 dark:placeholder-slate-500
+                         focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                         transition-all resize-none"
+                  placeholder="Raccontaci brevemente il tuo progetto, budget indicativo, tempistiche..."></textarea>
+              </div>
+
+              <!-- Privacy -->
+              <div class="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacy"
+                  required
+                  class="mt-1 w-4 h-4 rounded border-slate-300 dark:border-slate-700
+                         text-blue-600 focus:ring-2 focus:ring-blue-500">
+                <label for="privacy" class="text-xs text-slate-600 dark:text-slate-400">
+                  Acconsento al trattamento dei dati personali secondo la
+                  <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">privacy policy</a>.
+                  I dati verranno utilizzati esclusivamente per rispondere alla tua richiesta.
+                </label>
+              </div>
+
+              <!-- Pulsante Invio -->
+              <button
+                type="submit"
+                class="group/btn relative w-full px-6 py-4 rounded-lg
+                       bg-gradient-to-r from-blue-600 to-blue-700
+                       text-white font-semibold text-base
+                       shadow-lg shadow-blue-500/30
+                       hover:shadow-2xl hover:shadow-blue-500/50
+                       hover:-translate-y-1
+                       transition-all duration-300
+                       flex items-center justify-center gap-2
+                       overflow-hidden">
+
+                <!-- Overlay animato -->
+                <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+
+                <!-- Glow effect -->
+                <span class="absolute inset-0 rounded-lg blur-xl bg-blue-400/0 group-hover/btn:bg-blue-400/30 transition-all duration-300"></span>
+
+                <!-- Contenuto -->
+                <span class="relative z-10">Invia richiesta</span>
+                <i data-lucide="send" class="w-5 h-5 relative z-10"></i>
+              </button>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (Opzionale) -->
+  <section class="py-20 bg-white dark:bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6">
+
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3">
+          Domande frequenti
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Risposte rapide alle domande più comuni
+        </p>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- FAQ Item 1 -->
+        <details class="fade-in group p-6 rounded-xl bg-slate-50 dark:bg-slate-900/50
+                        border border-slate-200 dark:border-slate-800
+                        hover:shadow-lg transition-all duration-300">
+          <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white
+                         flex items-center justify-between">
+            Quanto tempo impiegate a rispondere?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Ci impegniamo a rispondere a tutte le richieste entro 24 ore lavorative.
+            Per le urgenze, puoi contattarci direttamente via telefono durante l'orario d'ufficio.
+          </p>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details class="fade-in group p-6 rounded-xl bg-slate-50 dark:bg-slate-900/50
+                        border border-slate-200 dark:border-slate-800
+                        hover:shadow-lg transition-all duration-300">
+          <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white
+                         flex items-center justify-between">
+            La consulenza iniziale è davvero gratuita?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Sì, la prima consulenza è completamente gratuita e senza impegno.
+            È un'occasione per conoscerci, capire le tue esigenze e proporti la soluzione migliore.
+          </p>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details class="fade-in group p-6 rounded-xl bg-slate-50 dark:bg-slate-900/50
+                        border border-slate-200 dark:border-slate-800
+                        hover:shadow-lg transition-all duration-300">
+          <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white
+                         flex items-center justify-between">
+            Quali informazioni dovrei includere nel messaggio?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Più dettagli fornisci, meglio possiamo aiutarti. Descrivi il tuo progetto,
+            gli obiettivi, il budget indicativo e le tempistiche. Non preoccuparti se non hai
+            ancora tutte le idee chiare - ti aiuteremo noi a definirle!
+          </p>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details class="fade-in group p-6 rounded-xl bg-slate-50 dark:bg-slate-900/50
+                        border border-slate-200 dark:border-slate-800
+                        hover:shadow-lg transition-all duration-300">
+          <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white
+                         flex items-center justify-between">
+            Lavorate solo con clienti della zona?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            No, lavoriamo con clienti in tutta Italia e anche all'estero.
+            Grazie agli strumenti digitali, possiamo collaborare efficacemente ovunque ti trovi.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <!-- LOGO -->
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/images/MM&R_logo.webp" class="h-7 w-7 rounded-lg shadow" alt="Logo" />
+        <span class="text-[15px] font-semibold text-slate-700 dark:text-slate-200">
+          MM&R<span class="text-blue-600 dark:text-blue-400">Design</span>
+        </span>
+      </a>
+
+      <!-- NAV LINKS -->
+      <nav class="flex gap-8 text-sm text-slate-600 dark:text-slate-400">
+        <a href="/index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+        <a href="/servizi.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Servizi</a>
+        <a href="/progetti.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Progetti</a>
+        <a href="/contatti.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contatti</a>
+      </nav>
+
+      <!-- SOCIAL ICONS -->
+      <div class="flex items-center gap-5">
+        <a href="#" aria-label="Facebook"
+           class="text-slate-400 hover:text-blue-500 transition transform hover:scale-110">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="Instagram"
+           class="text-slate-400 hover:text-pink-400 transition transform hover:scale-110">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn"
+           class="text-slate-400 hover:text-blue-600 transition transform hover:scale-110">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="X"
+           class="text-slate-400 hover:text-slate-600 transition transform hover:scale-110">
+          <i data-lucide="square-x" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT CENTERED -->
+    <div class="pb-6 text-center text-xs text-slate-500 dark:text-slate-500">
+      © 2025 MM&RDesign — Tutti i diritti riservati.
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollToTop"
+          aria-label="Torna su"
+          class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50
+                 w-10 h-10 rounded-full
+                 bg-blue-600 dark:bg-blue-500
+                 text-white
+                 shadow-md shadow-blue-500/25
+                 opacity-0 pointer-events-none
+                 hover:bg-blue-500 dark:hover:bg-blue-400
+                 transition-all duration-300
+                 flex items-center justify-center
+                 group">
+    <i data-lucide="arrow-up" class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform"></i>
+  </button>
+
+  <!-- JS -->
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>
